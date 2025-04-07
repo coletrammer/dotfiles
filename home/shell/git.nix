@@ -20,7 +20,7 @@
 
       username = lib.mkOption {
         type = lib.types.str;
-        default = "ColeTrammer";
+        default = "coletrammer";
         description = ''Username for git to use by default'';
       };
 
