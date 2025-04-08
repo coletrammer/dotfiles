@@ -26,7 +26,7 @@
     };
 
     ttx = {
-      url = "github:coletrammer/ttx";
+      url = "github:coletrammer/ttx/terminal-new";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
