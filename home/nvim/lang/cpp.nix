@@ -32,10 +32,10 @@
 
   config =
     let
-      clangVersion = "18";
+      clangVersion = "20";
       clangUnwrapped = pkgs."llvmPackages_${clangVersion}".clang-unwrapped;
       clang = pkgs."llvmPackages_${clangVersion}".libcxxClang;
-      clangToolsBase = pkgs."clang-tools_${clangVersion}";
+      clangToolsBase = pkgs."llvmPackages_${clangVersion}".clang-tools;
 
       # This keeps every package other than clangd from the original clang-tools, which is needed
       # since we want to use a custom clangd wrapper.
@@ -44,9 +44,9 @@
         version = clangToolsBase.version;
         unpackPhase = "true";
         installPhase = ''
-                                                                                                    mkdir -p $out/bin
-                                                                                                    cp ${clangToolsBase}/bin/* $out/bin
-rm $out/bin/clangd
+          mkdir -p $out/bin
+          cp ${clangToolsBase}/bin/* $out/bin
+          rm $out/bin/clangd
         '';
       });
 

@@ -94,6 +94,7 @@
             set-option -sa terminal-overrides ",xterm*:Tc"
             set -as terminal-overrides ",alacritty*:Tc"
             set-option -sa terminal-features ",xterm*:RGB"
+            set -as terminal-features 'xterm*:hyperlinks'
 
             # Extended keys
             set -s extended-keys on
