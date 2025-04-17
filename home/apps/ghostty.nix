@@ -81,6 +81,7 @@
 
           focus-follows-mouse = true;
 
+          app-notifications = "no-clipboard-copy";
           clipboard-read = "allow";
           clipboard-write = "allow";
           shell-integration-features = "no-cursor";
