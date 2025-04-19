@@ -20,7 +20,7 @@
   config =
     let
       autostart = shell: ''
-        [ -z "$TMUX" ] && [ -z "$ABDUCO_SOCKET" ] && [ "$TERM_PROGRAM" != "vscode" ] && { ${pkgs.abduco}/bin/abduco -A ttx ${shell} -i -c ttx; }
+        [ -z "$TMUX" ] && [ -z "$ZELLIJ" ] && [ -z "$ABDUCO_SOCKET" ] && [ "$TERM_PROGRAM" != "vscode" ] && { ${pkgs.abduco}/bin/abduco -A ttx ${shell} -i -c ttx; }
       '';
     in
     lib.mkIf config.shell.ttx.enable {
@@ -35,6 +35,17 @@
           prefix = "A";
           shell = "${config.preferences.shell}";
         };
+      };
+
+      # Persist ttx data.
+      home.persistence."/persist/home" = {
+        allowOther = true;
+        directories = [
+          {
+            directory = ".local/state/ttx";
+            method = "symlink";
+          }
+        ];
       };
     };
 }
