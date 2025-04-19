@@ -45,6 +45,10 @@
             directory = ".local/state/ttx";
             method = "symlink";
           }
+          {
+            directory = ".local/share/ttx";
+            method = "symlink";
+          }
         ];
       };
     };
