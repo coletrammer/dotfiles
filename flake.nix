@@ -26,7 +26,7 @@
     };
 
     ttx = {
-      url = "github:coletrammer/ttx";
+      url = "github:coletrammer/ttx/layout-save";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

@@ -34,6 +34,7 @@
         settings = {
           prefix = "A";
           shell = "${config.preferences.shell}";
+          autolayout = "main";
         };
       };
 

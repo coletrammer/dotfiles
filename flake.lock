@@ -179,15 +179,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1744611131,
-        "narHash": "sha256-LtHtOq1WBQM7i/6OlP+9yhteDwd2fHDuxlCFLwbl1kI=",
+        "lastModified": 1745130344,
+        "narHash": "sha256-eneJvyFADlBGJ66UgcqJjDv5k+CfCTFSM9pFWmRwwWQ=",
         "owner": "coletrammer",
         "repo": "di",
-        "rev": "451f3d9329274d831e78b2e63b5fa12d36b40c1a",
+        "rev": "ab26224e860398b65dd903287d9688a4fea8bada",
         "type": "github"
       },
       "original": {
         "owner": "coletrammer",
+        "ref": "json-serialization",
         "repo": "di",
         "type": "github"
       }
@@ -228,15 +229,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1744777067,
-        "narHash": "sha256-9Aa7o+jsMY5iO5rKcVMArnXSErt8GwnsWz97luwinKk=",
+        "lastModified": 1745103828,
+        "narHash": "sha256-tq1hUA3FUdDbCzkZOsmB/mZlFkYgRY0zhwV7+lEAfl0=",
         "owner": "coletrammer",
         "repo": "dius",
-        "rev": "b113535e8bc0e0707686b4563926f48826746628",
+        "rev": "d892afcdcc86050dca9b29bb4c365643fef1e3fb",
         "type": "github"
       },
       "original": {
         "owner": "coletrammer",
+        "ref": "filesystem-ops",
         "repo": "dius",
         "type": "github"
       }
@@ -662,15 +664,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1744779019,
-        "narHash": "sha256-WeQcibsOu2GYBmrT2CLeU9aTKbXYXhGcFStTKk+YWlo=",
+        "lastModified": 1745208828,
+        "narHash": "sha256-8quecgalC8cc/pnx37jOE+eKtZ/GypChXa3UK3Ii8lQ=",
         "owner": "coletrammer",
         "repo": "ttx",
-        "rev": "784f3bc12d0d68f12dc58fc6dcaeedab5465ef41",
+        "rev": "abf5f911b4ac4c0634a19cbe01b0fe618d0a3326",
         "type": "github"
       },
       "original": {
         "owner": "coletrammer",
+        "ref": "layout-save",
         "repo": "ttx",
         "type": "github"
       }
