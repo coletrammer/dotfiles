@@ -26,6 +26,7 @@
     };
 
     shell.vttest.enable = true;
+    shell.ttx.autostart = true;
 
     nvim.lang.cpp.queryDriver = [
       "/nix/store/*/bin/clang*"
