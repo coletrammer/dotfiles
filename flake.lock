@@ -179,16 +179,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1745130344,
-        "narHash": "sha256-eneJvyFADlBGJ66UgcqJjDv5k+CfCTFSM9pFWmRwwWQ=",
+        "lastModified": 1745302835,
+        "narHash": "sha256-7UXF3eD798nFA9G5F5p7ww3nuU2gyDNslYgYMOgvtOU=",
         "owner": "coletrammer",
         "repo": "di",
-        "rev": "ab26224e860398b65dd903287d9688a4fea8bada",
+        "rev": "1f040eae7af23ac814ff8eb331bb060a05619775",
         "type": "github"
       },
       "original": {
         "owner": "coletrammer",
-        "ref": "json-serialization",
         "repo": "di",
         "type": "github"
       }
@@ -229,16 +228,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1745103828,
-        "narHash": "sha256-tq1hUA3FUdDbCzkZOsmB/mZlFkYgRY0zhwV7+lEAfl0=",
+        "lastModified": 1745378840,
+        "narHash": "sha256-2318U7Jusk55iiKly9VLKGlzKFUCPg5gba23E5fzeRU=",
         "owner": "coletrammer",
         "repo": "dius",
-        "rev": "d892afcdcc86050dca9b29bb4c365643fef1e3fb",
+        "rev": "c8a97e9a27f94aa066b5a02579bf6fbbcdcf2ad1",
         "type": "github"
       },
       "original": {
         "owner": "coletrammer",
-        "ref": "filesystem-ops",
         "repo": "dius",
         "type": "github"
       }
@@ -290,11 +288,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1740872218,
-        "narHash": "sha256-ZaMw0pdoUKigLpv9HiNDH2Pjnosg7NBYMJlHTIsHEUo=",
+        "lastModified": 1743550720,
+        "narHash": "sha256-hIshGgKZCgWh6AYJpJmRgFdR3WUbkY04o82X05xqQiY=",
         "owner": "hercules-ci",
         "repo": "flake-parts",
-        "rev": "3876f6b87db82f33775b1ef5ea343986105db764",
+        "rev": "c621e8422220273271f52058f618c94e405bb0f5",
         "type": "github"
       },
       "original": {
@@ -664,16 +662,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1745208828,
-        "narHash": "sha256-8quecgalC8cc/pnx37jOE+eKtZ/GypChXa3UK3Ii8lQ=",
+        "lastModified": 1745389593,
+        "narHash": "sha256-MIlcjyNpKdnq2BdXyqfIegvJeqV3MNNcD0h7koqp45k=",
         "owner": "coletrammer",
         "repo": "ttx",
-        "rev": "abf5f911b4ac4c0634a19cbe01b0fe618d0a3326",
+        "rev": "82483f2c3f19b5d6c1207205e5e048364342d841",
         "type": "github"
       },
       "original": {
         "owner": "coletrammer",
-        "ref": "layout-save",
         "repo": "ttx",
         "type": "github"
       }
