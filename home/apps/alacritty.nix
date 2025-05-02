@@ -53,6 +53,11 @@
               mods = "Shift";
               chars = "\\u001d";
             }
+            {
+              key = "\\\\";
+              mods = "Control";
+              chars = "\\u001c";
+            }
           ];
         };
       };

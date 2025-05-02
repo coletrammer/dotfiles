@@ -30,6 +30,7 @@
         "ctrl+backspace" = "send_text all \\u0017";
         "ctrl+enter" = "send_text all \\u001e";
         "shift+enter" = "send_text all \\u001d";
+        "ctrl+\\" = "send_text all \\u001c";
       };
       shellIntegration = {
         enableBashIntegration = true;

@@ -15,6 +15,7 @@
     enable = true;
     alacritty.enable = true;
     kitty.enable = true;
+    contour.enable = true;
     wezterm.enable = true;
     obs.enable = true;
     steam.enable = true;

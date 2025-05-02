@@ -94,6 +94,9 @@
             "ctrl+enter=text:\\x1e"
             "shift+enter=text:\\x1d"
             "shift+backspace=text:\\x7f"
+
+            # Work-around for abduco+kitty key mode
+            "ctrl+\\=text:\\x1c"
           ] ++ uiBinds;
         };
       };
