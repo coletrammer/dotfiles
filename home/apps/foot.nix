@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  pkgs,
   ...
 }:
 {
@@ -10,8 +9,25 @@
   };
 
   config = lib.mkIf config.apps.foot.enable {
-    home.packages = with pkgs; [
-      foot
-    ];
+    programs.foot = {
+      enable = true;
+      settings = {
+        main = {
+          font = "${config.preferences.font.name}:size=${builtins.toString config.preferences.font.size_int}";
+          dpi-aware = "yes";
+        };
+
+        mouse = {
+          hide-when-typing = "yes";
+        };
+
+        text-bindings = {
+          "\\x17" = "Control+BackSpace";
+          "\\x1e" = "Control+Return";
+          "\\x1d" = "Shift+Return";
+          "\\x1c" = "Control+backslash";
+        };
+      };
+    };
   };
 }
