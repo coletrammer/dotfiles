@@ -40,10 +40,10 @@
             shift
 
             case "$command" in
-              export|unset) fzf --preview "eval 'echo \$'{}" "$@" ;;
-              unalias|kill) fzf "$@" ;;
-              ssh|telnet)   fzf --preview '${pkgs.dig}/bin/dig {}' "$@" ;;
-              *)            fzf --preview '${config.preferences.previewer} {}' "$@" ;;
+            export | unset) fzf --preview "eval 'echo \$'{}" "$@" ;;
+            unalias | kill) fzf "$@" ;;
+            ssh | telnet) fzf --preview '${pkgs.dig}/bin/dig {}' "$@" ;;
+            *) fzf --preview '${config.preferences.previewer} {}' "$@" ;;
             esac
           }
         '';
@@ -68,7 +68,7 @@
         ''
         + fzf-custom
       );
-      programs.zsh.initExtraFirst = lib.mkOrder 1 (
+      programs.zsh.initContent = lib.mkOrder 1 (
         ''
           source ${pkgs.fzf-git-sh}/share/fzf-git-sh/fzf-git.sh
         ''

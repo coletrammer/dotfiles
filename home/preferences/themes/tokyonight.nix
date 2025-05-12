@@ -52,7 +52,7 @@
       programs.bash.initExtra = lib.mkIf default (
         lib.mkOrder 0 "source ${config.xdg.configHome}/fzf/tokyonight.sh"
       );
-      programs.zsh.initExtraFirst = lib.mkIf default (
+      programs.zsh.initContent = lib.mkIf default (
         lib.mkOrder 0 "source ${config.xdg.configHome}/fzf/tokyonight.sh"
       );
       xdg.configFile."fzf/tokyonight.sh".source =

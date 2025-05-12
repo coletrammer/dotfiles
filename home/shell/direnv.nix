@@ -30,7 +30,7 @@
     };
 
     # Make sure to do this last.
-    programs.zsh.initExtra =
+    programs.zsh.initContent =
       lib.mkIf config.shell.direnv.enableCompletionAutoloadingWorkaround
       <| lib.mkOrder 2000 ''
         ###

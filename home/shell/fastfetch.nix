@@ -184,7 +184,7 @@
       }
     );
 
-    programs.zsh.initExtra = ''
+    programs.zsh.initContent = ''
       bindkey -s '^X' '^U fastfetch\n'
     '';
   };

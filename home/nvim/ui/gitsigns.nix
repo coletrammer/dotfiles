@@ -1,8 +1,8 @@
 {
   programs.nixvim = {
+    dependencies.git.enable = false;
     plugins.gitsigns = {
       enable = true;
-      gitPackage = null;
       settings = {
         current_line_blame = true;
         current_line_blame_opts = {
