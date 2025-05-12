@@ -135,7 +135,7 @@
       ''
     );
 
-    programs.zsh.initExtraFirst = lib.mkIf config.shell.tmux.autostart (
+    programs.zsh.initContent = lib.mkIf config.shell.tmux.autostart (
       lib.mkOrder 5 ''
         [ -z "$TMUX" ] && [ "$TERM_PROGRAM" != "vscode" ] && { tmux attach || exec tmux new-session; }
       ''

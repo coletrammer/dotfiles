@@ -36,15 +36,17 @@
         ignoreAllDups = true;
         path = "${config.xdg.dataHome}/zsh/zsh_history";
       };
-      initExtraFirst = lib.mkOrder 0 ''
-        # Ensure FZF keybindings work with zsh vi mode
-        ZVM_INIT_MODE=sourcing
-      '';
-      initExtra =
+      initContent =
         let
           files = [ ./zsh-settings.zsh ] ++ config.shell.zsh.extraInitScripts;
         in
-        files |> map (f: "source ${f}") |> lib.strings.concatLines;
+        lib.mkMerge [
+          (lib.mkOrder 0 ''
+            # Ensure FZF keybindings work with zsh vi mode
+            ZVM_INIT_MODE=sourcing
+          '')
+          (files |> map (f: "source ${f}") |> lib.strings.concatLines)
+        ];
       plugins =
         [
           {

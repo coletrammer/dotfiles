@@ -76,7 +76,7 @@
     };
 
     catppuccin-bottom = {
-      url = "github:catppuccin/bottom";
+      url = "github:catppuccin/bottom/ed09bd5a5dd78d83acdc8ff5fdec40a6340ed1c2";
       flake = false;
     };
 
