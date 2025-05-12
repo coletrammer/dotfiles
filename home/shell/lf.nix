@@ -95,7 +95,7 @@
     xdg.configFile."lf/icons".source = "${inputs.lf}/etc/icons.example";
     xdg.configFile."lf/colors".source = "${inputs.lf}/etc/colors.example";
 
-    programs.zsh.initContent = ''
+    programs.zsh.initExtra = ''
       source ${inputs.lf}/etc/lfcd.sh
 
       bindkey -s '^F' '^U lfcd\n'

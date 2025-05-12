@@ -105,22 +105,14 @@
       xdg.configFile."delta/catppuccin.gitconfig".source =
         "${inputs.catppuccin-delta}/catppuccin.gitconfig";
 
-      # Fzf + Zsh fast syntax highlighting
+      # Fzf
       programs.bash.initExtra = lib.mkIf default (
         lib.mkOrder 0 "source ${config.xdg.configHome}/fzf/catppuccin.sh"
       );
-      programs.zsh.initContent = lib.mkIf default (
-        lib.mkMerge [
-          (lib.mkOrder 0 "source ${config.xdg.configHome}/fzf/catppuccin.sh")
-          (lib.mkOrder 1100 ''
-            # Set syntax highlighting theme
-            # This should be doable at build time, since this trys to write a default theme file...
-            fast-theme XDG:catppuccin-${variant} >/dev/null 2>/dev/null
-          '')
-        ]
+      programs.zsh.initExtraFirst = lib.mkIf default (
+        lib.mkOrder 0 "source ${config.xdg.configHome}/fzf/catppuccin.sh"
       );
       xdg.configFile."fzf/catppuccin.sh".text = "${fzfOption}";
-      xdg.configFile."fsh".source = "${inputs.catppuccin-zsh-fsh}/themes";
 
       # Neovim
       programs.nixvim = lib.mkIf default {
@@ -223,6 +215,16 @@
           "catppuccin-${variant}" = "${inputs.yazi-flavors}/catppuccin-${variant}.yazi";
         };
       };
+
+      # Zsh fast syntax highlighting
+      programs.zsh.initExtra = lib.mkIf default (
+        lib.mkOrder 1100 ''
+          # Set syntax highlighting theme
+          # This should be doable at build time, since this trys to write a default theme file...
+          fast-theme XDG:catppuccin-${variant} >/dev/null 2>/dev/null
+        ''
+      );
+      xdg.configFile."fsh".source = "${inputs.catppuccin-zsh-fsh}/themes";
 
       # Alacritty
       programs.alacritty.settings.general.import = lib.mkIf default (

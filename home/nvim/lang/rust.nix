@@ -21,9 +21,9 @@
           rust = [ "rustfmt" ];
         };
       };
-      dependencies.rust-analyzer.enable = false;
       plugins.rustaceanvim = {
         enable = true;
+        rustAnalyzerPackage = null;
         settings = {
           dap = lib.mkIf config.nvim.lang.rust.lldb {
             adapter = {

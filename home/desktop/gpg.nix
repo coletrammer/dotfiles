@@ -15,7 +15,7 @@
     programs.gpg.enable = true;
     services.gpg-agent = {
       enable = true;
-      pinentry.package = pkgs.pinentry-qt;
+      pinentryPackage = pkgs.pinentry-qt;
     };
 
     home.persistence."/persist/home" = {

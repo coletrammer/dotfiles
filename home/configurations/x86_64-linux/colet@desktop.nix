@@ -28,7 +28,7 @@
   shell.ttx.autostart = true;
   shell.vttest.enable = true;
 
-  programs.zsh.initContent = ''
+  programs.zsh.initExtra = ''
     source /persist/secrets/env.sh
   '';
 

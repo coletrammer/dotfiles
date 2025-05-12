@@ -28,7 +28,7 @@
         lib.mkOrder 10000 (autostart "bash")
       );
 
-      programs.zsh.initContent = lib.mkIf config.shell.ttx.autostart (lib.mkOrder 5 (autostart "zsh"));
+      programs.zsh.initExtraFirst = lib.mkIf config.shell.ttx.autostart (lib.mkOrder 5 (autostart "zsh"));
       programs.ttx = {
         enable = true;
         settings = {
