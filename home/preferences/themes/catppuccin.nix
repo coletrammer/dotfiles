@@ -69,6 +69,10 @@
         marker = variantColors.lavender.hex;
         prompt = variantColors.mauve.hex;
         selected-bg = variantColors.surface1.hex;
+        border = variantColors.blue.hex;
+        label = variantColors.blue.hex;
+        separator = "59";
+        preview-border = "59";
       };
       fzfColorOptions =
         fzfColors |> lib.attrsets.mapAttrsToList (n: v: "${n}:${v}") |> lib.strings.concatStringsSep ",";
