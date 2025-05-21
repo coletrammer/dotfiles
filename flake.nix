@@ -26,7 +26,7 @@
     };
 
     ttx = {
-      url = "github:coletrammer/ttx/terminfo";
+      url = "github:coletrammer/ttx";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
