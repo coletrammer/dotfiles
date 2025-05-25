@@ -69,6 +69,9 @@
 
     extraConfigLua = ''
       vim.opt.fillchars:append({ diff = "╱" })
+
+      -- Force OSC 52 for clipboard.
+      vim.g.clipboard = "osc52"
     '';
 
     # Disable ruby provider
