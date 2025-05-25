@@ -23,7 +23,7 @@
         macos_option_as_alt = "yes";
         confirm_os_window_close = 0;
         placement_strategy = "top-left";
-        clipboard_control = "write-primary write-clipboard no-append";
+        clipboard_control = "write-primary write-clipboard read-primary read-clipboard";
         shell = config.preferences.shell;
       };
       keybindings = {

@@ -26,7 +26,7 @@
     };
 
     ttx = {
-      url = "github:coletrammer/ttx";
+      url = "github:coletrammer/ttx/osc52";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

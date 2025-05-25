@@ -69,31 +69,6 @@
 
     extraConfigLua = ''
       vim.opt.fillchars:append({ diff = "╱" })
-
-      -- Force OSC 52 for clipboard. This is specifically needed
-      -- because ttx doesn't (yet) support pasting via OSC 52,
-      -- and additionally doesn't support XTGETCAPS which prevents
-      -- neovim from detecting support.
-
-      -- To do this: we're using this snippet GitHub: https://github.com/neovim/neovim/discussions/28010#discussioncomment-9877494
-      local function paste()
-        return {
-          vim.fn.split(vim.fn.getreg(""), "\n"),
-          vim.fn.getregtype(""),
-        }
-      end
-
-      vim.g.clipboard = {
-        name = "OSC 52",
-        copy = {
-          ["+"] = require("vim.ui.clipboard.osc52").copy("+"),
-          ["*"] = require("vim.ui.clipboard.osc52").copy("*"),
-        },
-        paste = {
-          ["+"] = paste,
-          ["*"] = paste,
-        },
-      }
     '';
 
     # Disable ruby provider
