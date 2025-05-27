@@ -33,8 +33,8 @@
         "ctrl+\\" = "send_text all \\u001c";
       };
       shellIntegration = {
-        enableBashIntegration = true;
-        enableZshIntegration = true;
+        enableBashIntegration = false;
+        enableZshIntegration = false;
         mode = "no-cursor";
       };
     };

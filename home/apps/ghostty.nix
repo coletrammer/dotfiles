@@ -55,8 +55,8 @@
       programs.ghostty = {
         enable = true;
         package = if config.apps.ghostty.enablePackage then pkgs.ghostty else null;
-        enableBashIntegration = true;
-        enableZshIntegration = true;
+        enableBashIntegration = false;
+        enableZshIntegration = false;
         installVimSyntax = config.apps.ghostty.enablePackage;
         clearDefaultKeybinds = true;
         settings = {
@@ -85,6 +85,7 @@
           clipboard-read = "allow";
           clipboard-write = "allow";
           shell-integration-features = "no-cursor";
+          shell-integration = "none";
 
           macos-option-as-alt = true;
 

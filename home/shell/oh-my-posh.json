@@ -3,6 +3,8 @@
   "version": 2,
   "final_space": true,
   "disable_notice": false,
+  "pwd": "osc7",
+  "shell_integration": true,
   "blocks": [
     {
       "type": "prompt",

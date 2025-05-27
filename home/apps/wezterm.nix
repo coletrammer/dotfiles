@@ -21,6 +21,7 @@
     programs.wezterm = {
       enable = true;
       enableBashIntegration = false;
+      enableZshIntegration = false;
       extraConfig = ''
         local act = wezterm.action
 
@@ -46,9 +47,5 @@
         }
       '';
     };
-
-    programs.bash.initExtra = lib.mkOrder 9999 ''
-      source ${pkgs.wezterm}/etc/profile.d/wezterm.sh
-    '';
   };
 }
