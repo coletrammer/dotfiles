@@ -80,35 +80,4 @@
       }
     ];
   };
-  nvim.auto-session =
-    let
-      getCwd = helpers.lua ''
-        local function get_cwd_as_name()
-          local dir = vim.fn.getcwd(0)
-          return dir:gsub("[^A-Za-z0-9]", "_")
-        end
-      '';
-    in
-    {
-      preSaveCmds = [
-        (helpers.luaRawExpr ''
-          return function()
-            ${getCwd}
-
-            local autoformatting = require("autoformatting")
-            autoformatting.write_data(get_cwd_as_name())
-          end
-        '')
-      ];
-      postRestoreCmds = [
-        (helpers.luaRawExpr ''
-          return function()
-            ${getCwd}
-
-            local autoformatting = require("autoformatting")
-            autoformatting.read_data(get_cwd_as_name())
-          end
-        '')
-      ];
-    };
 }
