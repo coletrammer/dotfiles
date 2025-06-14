@@ -14,7 +14,6 @@
         package = null;
       };
     };
-    plugins.neotest.adapters.zig.enable = true;
   };
 
   home.packages = with pkgs; [

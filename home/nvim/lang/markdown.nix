@@ -15,9 +15,6 @@
         ];
       };
     };
-    plugins.lint.lintersByFt = {
-      markdown = [ "markdownlint" ];
-    };
     plugins.lsp.servers.marksman = {
       enable = true;
     };

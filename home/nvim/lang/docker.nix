@@ -1,9 +1,6 @@
-{ pkgs, ... }:
+{ ... }:
 {
   programs.nixvim = {
-    plugins.lint.lintersByFt = {
-      dockerfile = [ "hadolint" ];
-    };
     plugins.lsp.servers.dockerls = {
       enable = true;
     };
@@ -24,6 +21,4 @@
   };
 
   nvim.otter.allLangs = [ "docker" ];
-
-  home.packages = with pkgs; [ hadolint ];
 }

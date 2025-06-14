@@ -25,21 +25,6 @@
       plugins.rustaceanvim = {
         enable = true;
         settings = {
-          dap = lib.mkIf config.nvim.lang.rust.lldb {
-            adapter = {
-              executable = {
-                args = [
-                  "--port"
-                  "\${port}"
-                ];
-                command = "${pkgs.vscode-extensions.vadimcn.vscode-lldb}/share/vscode/extensions/vadimcn.vscode-lldb/adapter/codelldb";
-              };
-              name = "codelldb";
-              port = "\${port}";
-              type = "server";
-            };
-            autoload_configurations = true;
-          };
           server = {
             default_settings = {
               check = {
@@ -59,11 +44,6 @@
           };
         };
       };
-      plugins.neotest.settings.adapters = [
-        (helpers.luaExpr ''
-          return require("rustaceanvim.neotest")
-        '')
-      ];
       plugins.crates = {
         enable = true;
         lazyLoad.settings.event = "BufRead Cargo.toml";
@@ -82,7 +62,6 @@
     nvim.otter.allLangs = [ "rust" ];
 
     home.packages = with pkgs; [
-      cargo-nextest
       cargo
       clippy
       rust-analyzer

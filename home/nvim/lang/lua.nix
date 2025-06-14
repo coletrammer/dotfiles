@@ -6,9 +6,6 @@
         lua = [ "stylua" ];
       };
     };
-    plugins.lint.lintersByFt = {
-      lua = [ "luacheck" ];
-    };
     plugins.lsp = {
       servers = {
         lua_ls = {
@@ -64,7 +61,6 @@
 
   home.packages = with pkgs; [
     stylua
-    luajitPackages.luacheck
     lua-language-server
   ];
 }

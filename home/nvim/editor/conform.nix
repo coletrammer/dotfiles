@@ -5,6 +5,10 @@
       enable = true;
       settings = {
         notify_on_error = true;
+        format_on_save = {
+          timeout_ms = 1500;
+          lsp_format = "fallback";
+        };
         formatters_by_ft."_" = [ "trim_whitespace" ];
         formatters.injected.options.ignore_errors = true;
       };

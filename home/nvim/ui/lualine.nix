@@ -23,37 +23,8 @@
               __unkeyed-1 = "branch";
               icon = "";
             }
-            {
-              __unkeyed-1 = "diff";
-              symbols = {
-                added = " ";
-                modified = " ";
-                removed = " ";
-              };
-              source.__raw = ''
-                function()
-                  local gitsigns = vim.b.gitsigns_status_dict
-                  if gitsigns then
-                    return {
-                      added = gitsigns.added,
-                      modified = gitsigns.changed,
-                      removed = gitsigns.removed,
-                    }
-                  end
-                end
-              '';
-            }
           ];
           lualine_c = [
-            {
-              __unkeyed-1 = "diagnostics";
-              symbols = {
-                error = " ";
-                warn = " ";
-                hint = " ";
-                info = " ";
-              };
-            }
             {
               __unkeyed-1 = "filetype";
               icon_only = true;

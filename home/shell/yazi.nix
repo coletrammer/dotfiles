@@ -13,7 +13,7 @@
     programs.yazi = {
       enable = true;
       keymap = {
-        manager.prepend_keymap = [
+        mgr.prepend_keymap = [
           {
             run = "quit --no-cwd-file";
             on = [ "<C-q>" ];
@@ -21,7 +21,7 @@
         ];
       };
       settings = {
-        manager = {
+        mgr = {
           linemode = "size";
           show_hidden = true;
           show_symlink = true;

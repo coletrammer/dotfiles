@@ -22,9 +22,6 @@
           ];
         };
       };
-      plugins.lint.lintersByFt = {
-        nix = [ "nix" ];
-      };
       plugins.lsp = {
         servers = {
           nixd = {

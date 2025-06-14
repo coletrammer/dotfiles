@@ -9,9 +9,6 @@
         };
       };
     };
-    plugins.lint.lintersByFt = {
-      markdown = [ "markdownlint" ];
-    };
     plugins.lsp.servers.yamlls = {
       enable = true;
       extraOptions.settings = {

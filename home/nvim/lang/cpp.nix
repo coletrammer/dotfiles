@@ -134,56 +134,7 @@
             };
           };
         };
-        plugins.dap.adapters = {
-          executables = lib.mkIf config.nvim.lang.cpp.cppdbg {
-            cppdbg = {
-              command = "${pkgs.vscode-extensions.ms-vscode.cpptools}/share/vscode/extensions/ms-vscode.cpptools/debugAdapters/bin/OpenDebugAD7";
-              id = "cppdbg";
-            };
-          };
-          servers = lib.mkIf config.nvim.lang.cpp.lldb {
-            lldb = {
-              port = "\${port}";
-              executable = {
-                command = "${pkgs.vscode-extensions.vadimcn.vscode-lldb}/share/vscode/extensions/vadimcn.vscode-lldb/adapter/codelldb";
-                args = [
-                  "--port"
-                  "\${port}"
-                ];
-              };
-            };
-            codelldb = {
-              port = "\${port}";
-              executable = {
-                command = "${pkgs.vscode-extensions.vadimcn.vscode-lldb}/share/vscode/extensions/vadimcn.vscode-lldb/adapter/codelldb";
-                args = [
-                  "--port"
-                  "\${port}"
-                ];
-              };
-            };
-          };
-        };
       };
-
-      nvim.dap.vscode-adapters =
-        let
-          lldbConfig = {
-            codelldb = [
-              "c"
-              "cpp"
-              "rust"
-            ];
-          };
-          cppdbgConfig = {
-            cppdbg = [
-              "c"
-              "cpp"
-            ];
-          };
-        in
-        (if config.nvim.lang.cpp.lldb then lldbConfig else { })
-        // (if config.nvim.lang.cpp.cppdbg then cppdbgConfig else { });
 
       nvim.otter.allLangs = [
         "c"

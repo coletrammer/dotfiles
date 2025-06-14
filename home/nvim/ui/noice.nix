@@ -34,6 +34,7 @@
               event = "notify";
               any = [
                 { find = "Saved session"; }
+                { find = "No information available"; }
               ];
             };
             view = "mini";

@@ -95,30 +95,6 @@
         ];
       };
     };
-    plugins.lualine = {
-      settings.sections.lualine_c = [
-        (helpers.luaRawExpr ''
-          return (function()
-            local trouble = require("trouble")
-
-            local symbols = trouble.statusline({
-              mode = "lsp_document_symbols",
-              groups = {},
-              title = false,
-              filter = { range = true },
-              format = "{kind_icon}{symbol.name:Normal}",
-              -- The following line is needed to fix the background color
-              -- Set it to the lualine section you want to use
-              hl_group = "lualine_c_normal",
-            })
-            return {
-              symbols.get,
-              cond = symbols.has,
-            }
-          end)()
-        '')
-      ];
-    };
     plugins.fzf-lua = {
       settings.defaults.actions = {
         "ctrl-t" = helpers.luaRaw ''require("trouble.sources.fzf").actions.open'';
@@ -136,7 +112,6 @@
   };
 
   nvim.plugins = {
-    lualine.dependencies = [ "trouble" ];
     fzf-lua.dependencies = [ "trouble" ];
   };
 }

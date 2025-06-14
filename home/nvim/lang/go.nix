@@ -1,5 +1,4 @@
 {
-  helpers,
   pkgs,
   ...
 }:
@@ -58,25 +57,6 @@
         };
       };
     };
-    plugins.dap-go = {
-      enable = true;
-    };
-    plugins.neotest.settings.adapters = [
-      (helpers.luaExpr ''
-        return (function()
-          local neotest_golang = require("neotest-golang")
-          neotest_golang({ go_test_args = { "-v", "-count=1", "-timeout=60s" }, dap_go_enabled = true })
-          return neotest_golang
-        end)()
-      '')
-    ];
-    extraPlugins = with pkgs; [
-      vimPlugins.neotest-golang
-    ];
-  };
-
-  nvim.dap.vscode-adapters = {
-    delve = [ "go" ];
   };
 
   nvim.otter.allLangs = [ "go" ];

@@ -19,7 +19,7 @@
     ];
 
     home.sessionVariables = {
-      FLAKE = config.preferences.dotfilesPath;
+      NH_FLAKE = config.preferences.dotfilesPath;
     };
   };
 }
