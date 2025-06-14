@@ -101,9 +101,5 @@
           ] ++ uiBinds;
         };
       };
-
-      programs.nixvim.extraPlugins = lib.mkIf config.apps.ghostty.enablePackage [
-        config.programs.ghostty.package.vim
-      ];
     };
 }

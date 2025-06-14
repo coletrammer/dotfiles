@@ -26,6 +26,18 @@
       # Trying out the experimental lua loader.
       luaLoader.enable = true;
 
+      performance = {
+        # Performance - enable lua byte code compilation
+        byteCompileLua = {
+          enable = true;
+          configs = true;
+          initLua = true;
+          luaLib = true;
+          nvimRuntime = true;
+          plugins = true;
+        };
+      };
+
       # Use nixpkgs in sync with home manager.
       nixpkgs.useGlobalPackages = true;
 
