@@ -2,6 +2,7 @@
 ### Options
 ###
 setopt interactivecomments
+unsetopt BAD_PATTERN
 
 ###
 ### Keybindings

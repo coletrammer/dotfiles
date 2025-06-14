@@ -62,18 +62,8 @@
         ];
       };
 
-      programs.bash.initExtra = lib.mkOrder 1 (
-        ''
-          source ${pkgs.fzf-git-sh}/share/fzf-git-sh/fzf-git.sh
-        ''
-        + fzf-custom
-      );
-      programs.zsh.initContent = lib.mkOrder 1 (
-        ''
-          source ${pkgs.fzf-git-sh}/share/fzf-git-sh/fzf-git.sh
-        ''
-        + fzf-custom
-      );
+      programs.bash.initExtra = lib.mkOrder 1 fzf-custom;
+      programs.zsh.initContent = lib.mkOrder 1 fzf-custom;
     }
   );
 }
