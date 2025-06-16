@@ -154,5 +154,15 @@
     home.sessionVariables = {
       NIXOS_OZONE_WL = "1";
     };
+
+    home.persistence."/persist/home" = {
+      allowOther = true;
+      directories = [
+        {
+          directory = ".local/share/hyprland";
+          method = "symlink";
+        }
+      ];
+    };
   };
 }
