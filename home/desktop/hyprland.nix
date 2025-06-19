@@ -160,7 +160,7 @@
       directories = [
         {
           directory = ".local/share/hyprland";
-          method = "symlink";
+          # method = "symlink";
         }
       ];
     };
