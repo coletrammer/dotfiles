@@ -39,6 +39,10 @@
         cursor = {
           hide_on_key_press = true;
         };
+        ecosystem = {
+          no_update_news = true;
+          no_donation_nag = true;
+        };
         decoration = {
           rounding = 10;
 
@@ -153,16 +157,6 @@
 
     home.sessionVariables = {
       NIXOS_OZONE_WL = "1";
-    };
-
-    home.persistence."/persist/home" = {
-      allowOther = true;
-      directories = [
-        {
-          directory = ".local/share/hyprland";
-          # method = "symlink";
-        }
-      ];
     };
   };
 }
