@@ -172,7 +172,7 @@
           };
         };
         plugins.bufferline.settings.options.highlights.__raw =
-          "require('catppuccin.groups.integrations.bufferline').get()";
+          "require('catppuccin.groups.integrations.bufferline').get_theme()";
       };
 
       # Tmux
@@ -241,7 +241,7 @@
       # Ghostty
       apps.ghostty.theme = lib.mkIf default "catppuccin-${variant}";
       xdg.configFile."ghostty/themes/catppuccin-${variant}".source =
-        "${inputs.catppuccin-ghostty}/catppuccin-${variant}.conf";
+        "${inputs.catppuccin-ghostty}/themes/catppuccin-${variant}.conf";
 
       # Wezterm
       apps.wezterm.colorscheme = lib.mkIf default "Catppuccin ${variantTitleCase}";

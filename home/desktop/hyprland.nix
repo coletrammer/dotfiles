@@ -69,49 +69,48 @@
           font_size = config.preferences.font.size_int * 3 / 2;
           height = 14 * 3 / 2;
         };
-        bind =
-          [
-            "$mod, return, exec, ${config.preferences.terminal}"
-            "$mod, D, exec, rofi -show drun"
-            "$mod, O, exec, firefox"
-            "$mod, Q, killactive,"
-            "$mod, W, exec, wlogout"
-            "$mod, M, exit,"
-            "$mod, V, togglefloating,"
-            "$mod, Z, togglesplit,"
-            "$mod, X, swapsplit,"
-            "$mod, F, fullscreen,"
-            "$mod, S, togglegroup,"
-            "$mod, H, movefocus, l"
-            "$mod, J, movefocus, d"
-            "$mod, K, movefocus, u"
-            "$mod, L, movefocus, r"
-            "$mod CONTROL, N, changegroupactive, f"
-            "$mod CONTROL, P, changegroupactive, b"
-            "$mod CONTROL, L, lockactivegroup,"
-            "$mod CONTROL, O, moveoutofgroup,"
-            "$mod CONTROL, H, moveintogroup, l"
-            "$mod CONTROL, J, moveintogroup, d"
-            "$mod CONTROL, K, moveintogroup, u"
-            "$mod CONTROL, L, moveintogroup, r"
-          ]
-          ++ (builtins.concatLists (
-            builtins.genList (
-              x:
-              let
-                ws =
-                  let
-                    c = (x + 1) / 10;
-                  in
-                  builtins.toString (x + 1 - (c * 10));
-              in
-              [
-                "$mod, ${ws}, workspace, ${toString (x + 1)}"
-                "$mod SHIFT, ${ws}, movetoworkspace, ${toString (x + 1)}"
-                "$mod CONTROL, ${ws}, changegroupactive, ${toString (x + 1)}"
-              ]
-            ) 10
-          ));
+        bind = [
+          "$mod, return, exec, ${config.preferences.terminal}"
+          "$mod, D, exec, rofi -show drun"
+          "$mod, O, exec, firefox"
+          "$mod, Q, killactive,"
+          "$mod, W, exec, wlogout"
+          "$mod, M, exit,"
+          "$mod, V, togglefloating,"
+          "$mod, Z, togglesplit,"
+          "$mod, X, swapsplit,"
+          "$mod, F, fullscreen,"
+          "$mod, S, togglegroup,"
+          "$mod, H, movefocus, l"
+          "$mod, J, movefocus, d"
+          "$mod, K, movefocus, u"
+          "$mod, L, movefocus, r"
+          "$mod CONTROL, N, changegroupactive, f"
+          "$mod CONTROL, P, changegroupactive, b"
+          "$mod CONTROL, L, lockactivegroup,"
+          "$mod CONTROL, O, moveoutofgroup,"
+          "$mod CONTROL, H, moveintogroup, l"
+          "$mod CONTROL, J, moveintogroup, d"
+          "$mod CONTROL, K, moveintogroup, u"
+          "$mod CONTROL, L, moveintogroup, r"
+        ]
+        ++ (builtins.concatLists (
+          builtins.genList (
+            x:
+            let
+              ws =
+                let
+                  c = (x + 1) / 10;
+                in
+                builtins.toString (x + 1 - (c * 10));
+            in
+            [
+              "$mod, ${ws}, workspace, ${toString (x + 1)}"
+              "$mod SHIFT, ${ws}, movetoworkspace, ${toString (x + 1)}"
+              "$mod CONTROL, ${ws}, changegroupactive, ${toString (x + 1)}"
+            ]
+          ) 10
+        ));
         bindl = [
           ", XF86AudioPlay, exec, playerctl play-pause"
           ", XF86AudioPause, exec, playerctl pause"

@@ -24,7 +24,7 @@
   config = lib.mkIf config.shell.zsh.enable {
     programs.zsh = {
       enable = true;
-      dotDir = ".config/zsh";
+      dotDir = "${config.home.homeDirectory}/.config/zsh";
       defaultKeymap = "viins";
       autosuggestion = {
         enable = true;

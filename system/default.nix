@@ -12,7 +12,8 @@ in
     inputs.disko.nixosModules.default
     inputs.home-manager.nixosModules.default
     inputs.impermanence.nixosModules.impermanence
-  ] ++ modules;
+  ]
+  ++ modules;
 
   environment.systemPackages = with pkgs; [
     git

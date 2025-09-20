@@ -13,7 +13,7 @@
       };
       theme = lib.mkOption {
         type = lib.types.str;
-        default = "catppuccin-mocha";
+        default = "Catppuccin Mocha";
         description = "Ghostty theme";
       };
       windowDecorations = lib.mkEnableOption "Enable window decorations for ghostty" // {
@@ -98,7 +98,8 @@
 
             # Work-around for abduco+kitty key mode
             "ctrl+\\=text:\\x1c"
-          ] ++ uiBinds;
+          ]
+          ++ uiBinds;
         };
       };
     };

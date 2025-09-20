@@ -84,7 +84,8 @@
                   "path"
                   "buffer"
                   "snippets"
-                ] ++ config.nvim.blink-cmp.extraSources;
+                ]
+                ++ config.nvim.blink-cmp.extraSources;
               in
               helpers.luaRawExpr ''
                 return function(ctx)

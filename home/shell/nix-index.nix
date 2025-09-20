@@ -5,7 +5,7 @@
   ...
 }:
 {
-  imports = [ inputs.nix-index-database.hmModules.nix-index ];
+  imports = [ inputs.nix-index-database.homeModules.nix-index ];
 
   options = {
     shell.nix-index.enable = lib.mkEnableOption "nix-index" // {

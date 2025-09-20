@@ -1,4 +1,9 @@
-{ config, lib, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   options = {
     perf.enable = lib.mkEnableOption "perf" // {
@@ -7,6 +12,6 @@
   };
 
   config = lib.mkIf config.perf.enable {
-    environment.systemPackages = [ config.boot.kernelPackages.perf ];
+    environment.systemPackages = [ pkgs.perf ];
   };
 }
