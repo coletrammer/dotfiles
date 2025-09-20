@@ -20,6 +20,7 @@
         ${pkgs.steam-run}/bin/steam-run ${config.home.homeDirectory}/.local/bin/mons install main stable
       '')
       everest-mons
+      lunar-client
     ];
 
     home.sessionVariables = {
@@ -39,6 +40,18 @@
         }
         {
           directory = ".factorio";
+          # method = "symlink";
+        }
+        {
+          directory = ".lunarclient";
+          method = "symlink";
+        }
+        {
+          directory = ".minecraft";
+          method = "symlink";
+        }
+        {
+          directory = ".config/unity3d";
           # method = "symlink";
         }
       ];
