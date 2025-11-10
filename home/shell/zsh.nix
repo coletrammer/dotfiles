@@ -47,36 +47,35 @@
           '')
           (files |> map (f: "source ${f}") |> lib.strings.concatLines)
         ];
-      plugins =
-        [
-          {
-            name = "fzf-tab";
-            file = "share/fzf-tab/fzf-tab.plugin.zsh";
-            src = pkgs.zsh-fzf-tab;
-          }
-          {
-            name = "fast-syntax-highlighting";
-            file = "share/zsh/site-functions/fast-syntax-highlighting.plugin.zsh";
-            src = pkgs.zsh-fast-syntax-highlighting;
-          }
-          {
-            name = "vi-mode";
-            src = pkgs.zsh-vi-mode;
-            file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
-          }
-        ]
-        ++ (
-          if config.shell.zsh.enableNixShellPlugin then
-            [
-              {
-                name = "nix-shell";
-                file = "share/zsh-nix-shell/nix-shell.plugin.zsh";
-                src = pkgs.zsh-nix-shell;
-              }
-            ]
-          else
-            [ ]
-        );
+      plugins = [
+        {
+          name = "fzf-tab";
+          file = "share/fzf-tab/fzf-tab.plugin.zsh";
+          src = pkgs.zsh-fzf-tab;
+        }
+        {
+          name = "fast-syntax-highlighting";
+          file = "share/zsh/site-functions/fast-syntax-highlighting.plugin.zsh";
+          src = pkgs.zsh-fast-syntax-highlighting;
+        }
+        {
+          name = "vi-mode";
+          src = pkgs.zsh-vi-mode;
+          file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
+        }
+      ]
+      ++ (
+        if config.shell.zsh.enableNixShellPlugin then
+          [
+            {
+              name = "nix-shell";
+              file = "share/zsh-nix-shell/nix-shell.plugin.zsh";
+              src = pkgs.zsh-nix-shell;
+            }
+          ]
+        else
+          [ ]
+      );
     };
 
     home.persistence."/persist/home" = {

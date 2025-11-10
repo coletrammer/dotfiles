@@ -126,6 +126,10 @@
           ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
           ", XF86AudioLowerVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"
         ];
+        windowrulev2 = [
+          "float, title:^(LiveSplit One)$"
+          "size 700 1000, title:^(LiveSplit One)$"
+        ];
         animations = {
           enabled = "yes";
           bezier = [ "myBezier, 0.05, 0.9, 0.1, 1.05" ];

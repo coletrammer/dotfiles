@@ -1,5 +1,6 @@
 {
   config,
+  inputs,
   lib,
   pkgs,
   ...
@@ -9,25 +10,41 @@
     apps.obs.enable = lib.mkEnableOption "OBS";
   };
 
-  config = lib.mkIf config.apps.obs.enable {
-    programs.obs-studio = {
-      enable = true;
-      plugins = with pkgs.obs-studio-plugins; [
-        wlrobs
-        obs-livesplit-one
-        obs-pipewire-audio-capture
-        input-overlay
-      ];
-    };
+  config =
+    let
+      latest-obs-livesplit-one = pkgs.obs-studio-plugins.obs-livesplit-one.overrideAttrs (oa: rec {
+        name = "${oa.pname}-${version}";
+        version = "git";
+        src = inputs.obs-livesplit-one;
+        cargoDeps = pkgs.rustPlatform.fetchCargoVendor {
+          inherit src;
+          hash = "sha256-KLkjxuAuVk9awewSKRqgV+UzvOAAfLYKMA0+YqdBrkE=";
+        };
+      });
+    in
+    lib.mkIf config.apps.obs.enable {
+      programs.obs-studio = {
+        enable = true;
+        plugins = with pkgs.obs-studio-plugins; [
+          wlrobs
+          latest-obs-livesplit-one
+          obs-pipewire-audio-capture
+          input-overlay
+        ];
+      };
 
-    home.persistence."/persist/home" = {
-      allowOther = true;
-      directories = [
-        {
-          directory = ".config/obs-studio";
-          method = "symlink";
-        }
-      ];
+      home.persistence."/persist/home" = {
+        allowOther = true;
+        directories = [
+          {
+            directory = ".config/obs-studio";
+            method = "symlink";
+          }
+          {
+            directory = ".local/share/livesplitone";
+            # method = "symlink";
+          }
+        ];
+      };
     };
-  };
 }

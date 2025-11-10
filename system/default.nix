@@ -21,6 +21,7 @@ in
     nix-ld
   ];
 
+  programs.nix-ld.enable = true;
   programs.nano.enable = false;
   services.xserver.desktopManager.xterm.enable = false;
 }

@@ -178,11 +178,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1745302835,
-        "narHash": "sha256-7UXF3eD798nFA9G5F5p7ww3nuU2gyDNslYgYMOgvtOU=",
+        "lastModified": 1762747434,
+        "narHash": "sha256-bVH0VykyS+iPIUgWn6jYUzz0BGxcLwGhDNBoFYJ4wow=",
         "owner": "coletrammer",
         "repo": "di",
-        "rev": "1f040eae7af23ac814ff8eb331bb060a05619775",
+        "rev": "ee1df1455112deeb0511ab43e8470e1f2e96f808",
         "type": "github"
       },
       "original": {
@@ -287,11 +287,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1743550720,
-        "narHash": "sha256-hIshGgKZCgWh6AYJpJmRgFdR3WUbkY04o82X05xqQiY=",
+        "lastModified": 1762440070,
+        "narHash": "sha256-xxdepIcb39UJ94+YydGP221rjnpkDZUlykKuF54PsqI=",
         "owner": "hercules-ci",
         "repo": "flake-parts",
-        "rev": "c621e8422220273271f52058f618c94e405bb0f5",
+        "rev": "26d05891e14c88eb4a5d5bee659c0db5afb609d8",
         "type": "github"
       },
       "original": {
@@ -409,6 +409,23 @@
       "original": {
         "owner": "gokcehan",
         "repo": "lf",
+        "type": "github"
+      }
+    },
+    "live-split-druid": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1757912469,
+        "narHash": "sha256-1ZZXNAnZ11vwORQu3lwZOnSMIA6SBcyKxr2/VNnxut8=",
+        "owner": "AlexKnauth",
+        "repo": "livesplit-one-druid",
+        "rev": "6fcab93ebbc2ed0a7625e3ef159c33274e6bf8d8",
+        "type": "github"
+      },
+      "original": {
+        "owner": "AlexKnauth",
+        "ref": "dev",
+        "repo": "livesplit-one-druid",
         "type": "github"
       }
     },
@@ -557,6 +574,23 @@
         "type": "github"
       }
     },
+    "obs-livesplit-one": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1757988047,
+        "narHash": "sha256-yHAmWpte2F0yhmKJ3q0xFQJbfLCnqeOMq02bSkN1f+g=",
+        "owner": "AlexKnauth",
+        "repo": "obs-livesplit-one",
+        "rev": "018bf332e5a180aff55d9ce606645a1e5e8aad1d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "AlexKnauth",
+        "ref": "Refragg-2",
+        "repo": "obs-livesplit-one",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "ags": "ags",
@@ -575,10 +609,12 @@
         "home-manager": "home-manager",
         "impermanence": "impermanence",
         "lf": "lf",
+        "live-split-druid": "live-split-druid",
         "multicursor-nvim": "multicursor-nvim",
         "nix-index-database": "nix-index-database",
         "nixpkgs": "nixpkgs_2",
         "nixvim": "nixvim",
+        "obs-livesplit-one": "obs-livesplit-one",
         "stickybuf-nvim": "stickybuf-nvim",
         "tmux": "tmux",
         "treefmt-nix": "treefmt-nix",
@@ -693,16 +729,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1750053845,
-        "narHash": "sha256-tfLdF4dHZBXKQEj/0a8gmGX+fsAdc8KbELgFD/WOmVI=",
+        "lastModified": 1762752055,
+        "narHash": "sha256-111YUDVa9o+nGPZRh2NoQV/LPP2Qq+UlGJDIU2fZlqE=",
         "owner": "coletrammer",
         "repo": "ttx",
-        "rev": "334911161d2ee59b97c397cc1f29ae57ecb69ce7",
+        "rev": "91b437a3162bf0d7c4beddd2bbd4a0f7070083af",
         "type": "github"
       },
       "original": {
         "owner": "coletrammer",
-        "ref": "osc133",
         "repo": "ttx",
         "type": "github"
       }

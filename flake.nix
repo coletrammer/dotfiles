@@ -26,7 +26,7 @@
     };
 
     ttx = {
-      url = "github:coletrammer/ttx/osc133";
+      url = "github:coletrammer/ttx";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -38,6 +38,16 @@
     nix-index-database = {
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    live-split-druid = {
+      url = "github:AlexKnauth/livesplit-one-druid/dev";
+      flake = false;
+    };
+
+    obs-livesplit-one = {
+      url = "github:AlexKnauth/obs-livesplit-one/Refragg-2";
+      flake = false;
     };
 
     nixvim = {
@@ -170,7 +180,8 @@
               config.treefmt.build.wrapper
               pkgs.nodePackages_latest.npm
               pkgs.nodejs
-            ] ++ builtins.attrValues config.treefmt.build.programs;
+            ]
+            ++ builtins.attrValues config.treefmt.build.programs;
           };
         };
     };
