@@ -25,9 +25,21 @@
       url = "github:nix-community/impermanence";
     };
 
-    ttx = {
-      url = "github:coletrammer/ttx";
+    di = {
+      url = "github:coletrammer/di/minor-fixes";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    dius = {
+      url = "github:coletrammer/dius";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.di.follows = "di";
+    };
+
+    ttx = {
+      url = "github:coletrammer/ttx/reflow";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.dius.follows = "dius";
     };
 
     home-manager = {
