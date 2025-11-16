@@ -26,7 +26,7 @@
     };
 
     di = {
-      url = "github:coletrammer/di/minor-fixes";
+      url = "github:coletrammer/di";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -37,7 +37,7 @@
     };
 
     ttx = {
-      url = "github:coletrammer/ttx/reflow";
+      url = "github:coletrammer/ttx";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.dius.follows = "dius";
     };

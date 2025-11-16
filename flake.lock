@@ -174,16 +174,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1763254701,
-        "narHash": "sha256-nbBCfsDTg+HxUXFHhGbmfKqDx+47J6r+y3PiEBUxEas=",
+        "lastModified": 1763277956,
+        "narHash": "sha256-M+oQxYGyKPnQiXdsgpZ1fV5O4Pt6Dr7hgj7Q76uftXg=",
         "owner": "coletrammer",
         "repo": "di",
-        "rev": "7ac01eca8db41b447f70af5111fa0c8451f67b3a",
+        "rev": "eb8873eedd069d2b39d0a42e7e781b02e111de54",
         "type": "github"
       },
       "original": {
         "owner": "coletrammer",
-        "ref": "minor-fixes",
         "repo": "di",
         "type": "github"
       }
@@ -200,11 +199,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1762747434,
-        "narHash": "sha256-bVH0VykyS+iPIUgWn6jYUzz0BGxcLwGhDNBoFYJ4wow=",
+        "lastModified": 1763277956,
+        "narHash": "sha256-M+oQxYGyKPnQiXdsgpZ1fV5O4Pt6Dr7hgj7Q76uftXg=",
         "owner": "coletrammer",
         "repo": "di",
-        "rev": "ee1df1455112deeb0511ab43e8470e1f2e96f808",
+        "rev": "eb8873eedd069d2b39d0a42e7e781b02e111de54",
         "type": "github"
       },
       "original": {
@@ -346,11 +345,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1762440070,
-        "narHash": "sha256-xxdepIcb39UJ94+YydGP221rjnpkDZUlykKuF54PsqI=",
+        "lastModified": 1762980239,
+        "narHash": "sha256-8oNVE8TrD19ulHinjaqONf9QWCKK+w4url56cdStMpM=",
         "owner": "hercules-ci",
         "repo": "flake-parts",
-        "rev": "26d05891e14c88eb4a5d5bee659c0db5afb609d8",
+        "rev": "52a2caecc898d0b46b2b905f058ccc5081f842da",
         "type": "github"
       },
       "original": {
@@ -792,16 +791,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1763254615,
-        "narHash": "sha256-dgCnZx01EE8IURiHwl60jTo+/43zHDof8ojc4KfVPPg=",
+        "lastModified": 1763334130,
+        "narHash": "sha256-LFj0wDivgHH0lKYVqhxwDi7H3Mo+UEe/RttSQ/xs/Kg=",
         "owner": "coletrammer",
         "repo": "ttx",
-        "rev": "06fa96412c52c6f7fdccd1254d1b1191712c8437",
+        "rev": "2bc91cb9d7b958acaa5672732dd733a9b6d98e45",
         "type": "github"
       },
       "original": {
         "owner": "coletrammer",
-        "ref": "reflow",
         "repo": "ttx",
         "type": "github"
       }
