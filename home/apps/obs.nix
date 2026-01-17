@@ -18,7 +18,7 @@
         src = inputs.obs-livesplit-one;
         cargoDeps = pkgs.rustPlatform.fetchCargoVendor {
           inherit src;
-          hash = "sha256-KLkjxuAuVk9awewSKRqgV+UzvOAAfLYKMA0+YqdBrkE=";
+          hash = "sha256-8E29aYfX9Vj4yBnSKsk487zWboJ6xZAanqOKs9eXjYg=";
         };
       });
     in

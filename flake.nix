@@ -58,7 +58,7 @@
     };
 
     obs-livesplit-one = {
-      url = "github:AlexKnauth/obs-livesplit-one/Refragg-2";
+      url = "github:ColeTrammer/obs-livesplit-one/master";
       flake = false;
     };
 

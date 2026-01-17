@@ -635,16 +635,16 @@
     "obs-livesplit-one": {
       "flake": false,
       "locked": {
-        "lastModified": 1757988047,
-        "narHash": "sha256-yHAmWpte2F0yhmKJ3q0xFQJbfLCnqeOMq02bSkN1f+g=",
-        "owner": "AlexKnauth",
+        "lastModified": 1768624409,
+        "narHash": "sha256-+lDWZB+Cxn3GigVhKSspqYJIz/d7WvDB2tvgAQYX0Dw=",
+        "owner": "ColeTrammer",
         "repo": "obs-livesplit-one",
-        "rev": "018bf332e5a180aff55d9ce606645a1e5e8aad1d",
+        "rev": "ef57180c5711dd03a28e2f1dbc20d4a8334a7d8a",
         "type": "github"
       },
       "original": {
-        "owner": "AlexKnauth",
-        "ref": "Refragg-2",
+        "owner": "ColeTrammer",
+        "ref": "master",
         "repo": "obs-livesplit-one",
         "type": "github"
       }
