@@ -635,11 +635,11 @@
     "obs-livesplit-one": {
       "flake": false,
       "locked": {
-        "lastModified": 1768624409,
-        "narHash": "sha256-+lDWZB+Cxn3GigVhKSspqYJIz/d7WvDB2tvgAQYX0Dw=",
+        "lastModified": 1769405129,
+        "narHash": "sha256-WARG7nfMaOaA4nb07l2QhrpCgvF9OemqGVocuW8xApY=",
         "owner": "ColeTrammer",
         "repo": "obs-livesplit-one",
-        "rev": "ef57180c5711dd03a28e2f1dbc20d4a8334a7d8a",
+        "rev": "7bebe701491298b3ab08a8aae7ab907c09f3fab6",
         "type": "github"
       },
       "original": {

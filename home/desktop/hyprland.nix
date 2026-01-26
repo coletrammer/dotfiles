@@ -23,6 +23,7 @@
           kb_layout = "us";
           follow_mouse = 1;
           kb_options = "caps:swapescape";
+          numlock_by_default = true;
         };
         dwindle = {
           preserve_split = true;
@@ -110,7 +111,50 @@
               "$mod CONTROL, ${ws}, changegroupactive, ${toString (x + 1)}"
             ]
           ) 10
-        ));
+        ))
+        ++ lib.flatten (
+          let
+            # Note Hyprland does not support naming numlock keys for some reason, and obs does not support
+            # receiving numpad keys using Hyprland's "pass" functionality. Therefore we map the raw keycodes
+            # to regular key events which obs actually supports...
+            obs-keys = [
+              {
+                i = "code:90"; # KP_0
+                o = "Q";
+              }
+              {
+                i = "code:87"; # KP_1
+                o = "W";
+              }
+              {
+                i = "code:88"; # KP_2
+                o = "E";
+              }
+              {
+                i = "code:89"; # KP_3
+                o = "R";
+              }
+              {
+                i = "code:79"; # KP_7
+                o = "T";
+              }
+              {
+                i = "code:81"; # KP_9
+                o = "Y";
+              }
+              {
+                i = "code:91"; # KP_Decimal
+                o = "U";
+              }
+            ];
+          in
+          map (
+            { i, o }:
+            [
+              ", ${i}, sendshortcut, ,${o}, class:^(com\\.obsproject\\.Studio)$"
+            ]
+          ) obs-keys
+        );
         bindl = [
           ", XF86AudioPlay, exec, playerctl play-pause"
           ", XF86AudioPause, exec, playerctl pause"
