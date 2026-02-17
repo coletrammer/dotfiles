@@ -37,9 +37,14 @@
     };
 
     ttx = {
-      url = "github:coletrammer/ttx";
+      url = "github:coletrammer/ttx/seamless-nav";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.dius.follows = "dius";
+    };
+
+    seamless-navigation-nvim = {
+      url = "github:coletrammer/seamless-navigation.nvim";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     home-manager = {

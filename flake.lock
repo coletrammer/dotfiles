@@ -340,6 +340,27 @@
     "flake-parts_5": {
       "inputs": {
         "nixpkgs-lib": [
+          "seamless-navigation-nvim",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1769996383,
+        "narHash": "sha256-AnYjnFWgS49RlqX7LrC4uA+sCCDBj0Ry/WOJ5XWAsa0=",
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "rev": "57928607ea566b5db3ad13af0e57e921e6b12381",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hercules-ci",
+        "repo": "flake-parts",
+        "type": "github"
+      }
+    },
+    "flake-parts_6": {
+      "inputs": {
+        "nixpkgs-lib": [
           "ttx",
           "nixpkgs"
         ]
@@ -675,12 +696,34 @@
         "nixpkgs": "nixpkgs_2",
         "nixvim": "nixvim",
         "obs-livesplit-one": "obs-livesplit-one",
+        "seamless-navigation-nvim": "seamless-navigation-nvim",
         "stickybuf-nvim": "stickybuf-nvim",
         "tmux": "tmux",
         "treefmt-nix": "treefmt-nix",
         "ttx": "ttx",
         "yazi-flavors": "yazi-flavors",
         "yazi-plugins": "yazi-plugins"
+      }
+    },
+    "seamless-navigation-nvim": {
+      "inputs": {
+        "flake-parts": "flake-parts_5",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1771313038,
+        "narHash": "sha256-5++2M9r1yCIot+qgPznb3xekzehICllIMiep3R0+pQM=",
+        "owner": "coletrammer",
+        "repo": "seamless-navigation.nvim",
+        "rev": "9b9027f004bbbdb8c4618b82ed1109c0abb3f202",
+        "type": "github"
+      },
+      "original": {
+        "owner": "coletrammer",
+        "repo": "seamless-navigation.nvim",
+        "type": "github"
       }
     },
     "stickybuf-nvim": {
@@ -785,21 +828,22 @@
         "dius": [
           "dius"
         ],
-        "flake-parts": "flake-parts_5",
+        "flake-parts": "flake-parts_6",
         "nixpkgs": [
           "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1768364006,
-        "narHash": "sha256-7im/G1c4iXdIT6Dx4u5sriyZwGQP35nDYhsWUgyypqc=",
+        "lastModified": 1771315904,
+        "narHash": "sha256-JmERtabM8LF1TcLVFCMV1sXrP0QwJcPJilP7UuLb674=",
         "owner": "coletrammer",
         "repo": "ttx",
-        "rev": "bc0b65614794dc228f5a3dc4fb08f94555700133",
+        "rev": "cc8397dc023c166814767c6361827ee3434d2a49",
         "type": "github"
       },
       "original": {
         "owner": "coletrammer",
+        "ref": "seamless-nav",
         "repo": "ttx",
         "type": "github"
       }
