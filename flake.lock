@@ -834,16 +834,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1771315904,
-        "narHash": "sha256-JmERtabM8LF1TcLVFCMV1sXrP0QwJcPJilP7UuLb674=",
+        "lastModified": 1771998066,
+        "narHash": "sha256-v6pvL0ciujYy4CyfbxPS7kBAqnkMDCE770pVqO3Lo24=",
         "owner": "coletrammer",
         "repo": "ttx",
-        "rev": "cc8397dc023c166814767c6361827ee3434d2a49",
+        "rev": "a32e118f9d7932ff67f2acfec9762d55a243e211",
         "type": "github"
       },
       "original": {
         "owner": "coletrammer",
-        "ref": "seamless-nav",
         "repo": "ttx",
         "type": "github"
       }

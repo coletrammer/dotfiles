@@ -37,7 +37,7 @@
     };
 
     ttx = {
-      url = "github:coletrammer/ttx/seamless-nav";
+      url = "github:coletrammer/ttx";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.dius.follows = "dius";
     };
