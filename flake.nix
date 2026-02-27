@@ -26,18 +26,18 @@
     };
 
     di = {
-      url = "github:coletrammer/di";
+      url = "github:coletrammer/di/cli-subcommands";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     dius = {
-      url = "github:coletrammer/dius";
+      url = "github:coletrammer/dius/subcommands";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.di.follows = "di";
     };
 
     ttx = {
-      url = "github:coletrammer/ttx";
+      url = "github:coletrammer/ttx/subcommands";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.dius.follows = "dius";
     };

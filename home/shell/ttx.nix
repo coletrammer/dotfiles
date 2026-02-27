@@ -20,7 +20,7 @@
   config =
     let
       autostart = shell: ''
-        [ -z "$TMUX" ] && [ -z "$ZELLIJ" ] && [ -z "$ABDUCO_SOCKET" ] && [ "$TERM_PROGRAM" != "vscode" ] && [ "$TERM_PROGRAM" != "ttx" ] && { ${pkgs.abduco}/bin/abduco -A ttx ${shell} -i -c ttx; }
+        [ -z "$TMUX" ] && [ -z "$ZELLIJ" ] && [ -z "$ABDUCO_SOCKET" ] && [ "$TERM_PROGRAM" != "vscode" ] && [ "$TERM_PROGRAM" != "ttx" ] && { ${pkgs.abduco}/bin/abduco -A ttx ttx new --prefix A --layout-save main --layout-restore main ${config.preferences.shell}; }
       '';
     in
     lib.mkIf config.shell.ttx.enable {
@@ -31,11 +31,6 @@
       programs.zsh.initContent = lib.mkIf config.shell.ttx.autostart (lib.mkOrder 5 (autostart "zsh"));
       programs.ttx = {
         enable = true;
-        settings = {
-          prefix = "A";
-          shell = "${config.preferences.shell}";
-          autolayout = "main";
-        };
       };
 
       # Persist ttx data.
