@@ -17,16 +17,13 @@
       vesktop
     ];
 
-    home.persistence."/persist/home" = {
-      allowOther = true;
+    home.persistence."/persist" = {
       directories = [
         {
           directory = ".config/discord";
-          method = "symlink";
         }
         {
           directory = ".config/vesktop";
-          method = "symlink";
         }
       ];
     };

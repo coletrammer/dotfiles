@@ -15,16 +15,13 @@
       BROWSER = "firefox";
     };
 
-    home.persistence."/persist/home" = {
-      allowOther = true;
+    home.persistence."/persist" = {
       directories = [
         {
           directory = ".mozilla/extensions";
-          method = "symlink";
         }
         {
           directory = ".mozilla/firefox";
-          method = "symlink";
         }
       ];
     };

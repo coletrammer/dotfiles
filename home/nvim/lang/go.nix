@@ -4,6 +4,7 @@
 }:
 {
   programs.nixvim = {
+    dependencies.go.enable = false;
     plugins.conform-nvim = {
       settings.formatters_by_ft = {
         go = [

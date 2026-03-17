@@ -20,7 +20,7 @@
   config =
     let
       autostart = shell: ''
-        [ -z "$TMUX" ] && [ -z "$ZELLIJ" ] && [ -z "$ABDUCO_SOCKET" ] && [ "$TERM_PROGRAM" != "vscode" ] && [ "$TERM_PROGRAM" != "ttx" ] && { ${pkgs.abduco}/bin/abduco -A ttx ttx new --prefix A --layout-save main --layout-restore main ${config.preferences.shell}; }
+        [ -z "$TMUX" ] && [ -z "$NVIM" ] && [ -z "$ZELLIJ" ] && [ -z "$ABDUCO_SOCKET" ] && [ "$TERM_PROGRAM" != "vscode" ] && [ "$TERM_PROGRAM" != "ttx" ] && { ${pkgs.abduco}/bin/abduco -A ttx ttx new --prefix A --layout-save main --layout-restore main ${config.preferences.shell}; }
       '';
     in
     lib.mkIf config.shell.ttx.enable {
@@ -34,16 +34,13 @@
       };
 
       # Persist ttx data.
-      home.persistence."/persist/home" = {
-        allowOther = true;
+      home.persistence."/persist" = {
         directories = [
           {
             directory = ".local/state/ttx";
-            method = "symlink";
           }
           {
             directory = ".local/share/ttx";
-            method = "symlink";
           }
         ];
       };

@@ -7,9 +7,8 @@
   };
 
   config = lib.mkIf config.desktop.keyring.enable {
-    home.persistence."/persist/home" = {
+    home.persistence."/persist" = {
       directories = [ ".local/share/keyrings" ];
-      allowOther = true;
     };
   };
 }

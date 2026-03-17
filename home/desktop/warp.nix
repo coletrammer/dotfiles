@@ -31,9 +31,8 @@
       };
     };
 
-    home.persistence."/persist/home" = {
+    home.persistence."/persist" = {
       directories = [ ".local/share/warp" ];
-      allowOther = true;
     };
   };
 }

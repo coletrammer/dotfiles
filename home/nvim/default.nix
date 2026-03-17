@@ -29,7 +29,7 @@
       performance = {
         # Performance - enable lua byte code compilation
         byteCompileLua = {
-          enable = true;
+          enable = false;
           configs = true;
           initLua = true;
           luaLib = true;
@@ -43,11 +43,13 @@
 
       # wl-clipboard is required for copy/paste to work on wayland desktops.
       # ripgrep and fd is used for search
-      extraPackages = with pkgs; [
-        wl-clipboard
-        ripgrep
-        fd
-      ];
+      extraPackages =
+        with pkgs;
+        [
+          ripgrep
+          fd
+        ]
+        ++ (if config.preferences.os == "linux" then [ wl-clipboard ] else [ ]);
     };
 
     # Aliases
@@ -57,16 +59,13 @@
     };
 
     # Persist nvim data.
-    home.persistence."/persist/home" = {
-      allowOther = true;
+    home.persistence."/persist" = {
       directories = [
         {
           directory = ".local/state/nvim";
-          method = "symlink";
         }
         {
           directory = ".local/share/nvim";
-          method = "symlink";
         }
       ];
     };

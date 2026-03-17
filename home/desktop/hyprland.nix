@@ -13,8 +13,8 @@
         "$mod" = "SUPER";
         monitor = [
           ",preferred,auto,1"
-          "DP-1, 3840x2160, 0x0, 1.5"
-          "DP-2, 3840x2160, 2560x0, 1.5"
+          "DP-1, 3840x2160, 2560x0, 1.5"
+          "DP-2, 3840x2160, 0x0, 1.5"
         ];
         xwayland = {
           force_zero_scaling = true;
@@ -170,9 +170,9 @@
           ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
           ", XF86AudioLowerVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"
         ];
-        windowrulev2 = [
-          "float, title:^(LiveSplit One)$"
-          "size 700 1000, title:^(LiveSplit One)$"
+        windowrule = [
+          "match:title ^(LiveSplit One)$, float on"
+          "match:title ^(LiveSplit One)$, size 700 1000"
         ];
         animations = {
           enabled = "yes";

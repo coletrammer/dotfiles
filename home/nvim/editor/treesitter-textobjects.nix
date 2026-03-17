@@ -2,33 +2,35 @@
   programs.nixvim = {
     plugins.treesitter-textobjects = {
       enable = true;
-      move = {
-        enable = true;
-        setJumps = true;
-        gotoNextStart = {
-          "]f" = "@function.outer";
-          "]]" = "@class.outer";
+      settings = {
+        move = {
+          enable = true;
+          set_jumps = true;
+          goto_next_start = {
+            "]f" = "@function.outer";
+            "]]" = "@class.outer";
+          };
+          goto_next_end = {
+            "]F" = "@function.outer";
+            "][" = "@class.outer";
+          };
+          goto_previous_start = {
+            "[f" = "@function.outer";
+            "[[" = "@class.outer";
+          };
+          goto_previous_end = {
+            "[F" = "@function.outer";
+            "[]" = "@class.outer";
+          };
         };
-        gotoNextEnd = {
-          "]F" = "@function.outer";
-          "][" = "@class.outer";
-        };
-        gotoPreviousStart = {
-          "[f" = "@function.outer";
-          "[[" = "@class.outer";
-        };
-        gotoPreviousEnd = {
-          "[F" = "@function.outer";
-          "[]" = "@class.outer";
-        };
-      };
-      swap = {
-        enable = true;
-        swapNext = {
-          "<leader>a" = "@parameter.inner";
-        };
-        swapPrevious = {
-          "<leader>A" = "@parameter.inner";
+        swap = {
+          enable = true;
+          swap_next = {
+            "<leader>a" = "@parameter.inner";
+          };
+          swap_previous = {
+            "<leader>A" = "@parameter.inner";
+          };
         };
       };
     };

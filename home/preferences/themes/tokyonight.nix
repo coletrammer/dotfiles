@@ -16,7 +16,7 @@
       variant = lib.mkOption {
         type = lib.types.str;
         default = "night";
-        description = ''Color scheme variant'';
+        description = "Color scheme variant";
       };
     };
   };
@@ -41,9 +41,11 @@
       };
 
       # Delta
+      programs.delta = lib.mkIf default {
+        options.syntax-theme = "tokyonight";
+      };
       programs.git = lib.mkIf default {
-        delta.options.syntax-theme = "tokyonight";
-        extraConfig.include.path = [ "${config.xdg.configHome}/delta/tokyonight.gitconfig" ];
+        settings.include.path = [ "${config.xdg.configHome}/delta/tokyonight.gitconfig" ];
       };
       xdg.configFile."delta/tokyonight.gitconfig".source =
         "${tokyonightPlugin}/extras/delta/tokyonight_${variant}.gitconfig";

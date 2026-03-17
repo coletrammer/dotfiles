@@ -14,12 +14,10 @@
   config = lib.mkIf config.apps.spotify.enable {
     home.packages = with pkgs; [ spotify ];
 
-    home.persistence."/persist/home" = {
-      allowOther = true;
+    home.persistence."/persist" = {
       directories = [
         {
           directory = ".config/spotify";
-          method = "symlink";
         }
       ];
     };

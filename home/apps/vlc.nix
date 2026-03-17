@@ -14,8 +14,7 @@
   config = lib.mkIf config.apps.vlc.enable {
     home.packages = with pkgs; [ vlc ];
 
-    home.persistence."/persist/home" = {
-      allowOther = true;
+    home.persistence."/persist" = {
       directories = [ ".config/vlc" ];
     };
   };

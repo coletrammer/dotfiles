@@ -10,7 +10,7 @@
       extraSources = lib.mkOption {
         type = with lib.types; listOf str;
         default = [ ];
-        description = ''Extra completion sources.'';
+        description = "Extra completion sources.";
       };
     };
   };
@@ -19,8 +19,9 @@
     programs.nixvim = {
       plugins.blink-cmp = {
         enable = true;
+        # NOTE: we can't use lazy loading because the LSP config in Nixvim no longer supports it.
         # DeferredUIEnter and not InsertEnter so we get completions in command mode.
-        lazyLoad.settings.event = "DeferredUIEnter";
+        # lazyLoad.settings.event = "DeferredUIEnter";
         settings = {
           appearance = {
             use_nvim_cmp_as_default = false;
@@ -173,7 +174,7 @@
               end
             end)()
           '';
-          options.desc = ''Toggle Auto-Complete'';
+          options.desc = "Toggle Auto-Complete";
         }
       ];
       autoGroups.disableCmp.clear = true;

@@ -12,7 +12,7 @@
       colorscheme = lib.mkOption {
         type = lib.types.str;
         default = "Catppuccin Mocha";
-        description = ''colorscheme'';
+        description = "colorscheme";
       };
     };
   };

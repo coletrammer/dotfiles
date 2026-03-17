@@ -18,11 +18,11 @@
 
         src = inputs.live-split-druid;
 
-        cargoHash = "sha256-+ChJx1GjZSGSJwUtFKM1Q6i/teHHefNE2dIEFET1fPI=";
+        cargoHash = "sha256-L3k0mEOYBM6LxmeoUydAAILTstfVaypLY3pjmpnkKKA=";
 
         nativeBuildInputs = with pkgs; [
           pkg-config
-          wrapGAppsHook
+          wrapGAppsHook3
         ];
         buildInputs = with pkgs; [
           glib

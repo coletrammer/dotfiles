@@ -20,7 +20,7 @@
             enable = false;
             url = "";
           };
-          schemas.__raw = ''require('schemastore').yaml.schemas()'';
+          schemas.__raw = "require('schemastore').yaml.schemas()";
         };
       };
     };

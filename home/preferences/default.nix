@@ -22,99 +22,101 @@
 
       os = lib.mkOption {
         type = lib.types.str;
-        default = builtins.head (builtins.tail (builtins.tail (builtins.split "-" (pkgs.system))));
-        description = ''Operating system'';
+        default = builtins.head (
+          builtins.tail (builtins.tail (builtins.split "-" (pkgs.stdenv.hostPlatform.system)))
+        );
+        description = "Operating system";
       };
 
       theme = lib.mkOption {
         type = lib.types.str;
         default = "catppuccin";
-        description = ''Default theme'';
+        description = "Default theme";
       };
 
       prompt = lib.mkOption {
         type = lib.types.str;
         default = "oh-my-posh";
-        description = ''Shell prompt to use (starship or oh-my-posh)'';
+        description = "Shell prompt to use (starship or oh-my-posh)";
       };
 
       workspacePath = lib.mkOption {
         type = lib.types.path;
         default = "${config.home.homeDirectory}/Workspace";
-        description = ''Path to coding workspace.'';
+        description = "Path to coding workspace.";
       };
 
       dotfilesPath = lib.mkOption {
         type = lib.types.path;
         default = "${config.preferences.workspacePath}/nix/dotfiles";
-        description = ''Path to dotfiles source.'';
+        description = "Path to dotfiles source.";
       };
 
       terminalFileManager = lib.mkOption {
         type = lib.types.str;
         default = "yazi";
-        description = ''Terminal file manager.'';
+        description = "Terminal file manager.";
         example = "lf";
       };
 
       pager = lib.mkOption {
         type = lib.types.str;
         default = "${pkgs.bat}/bin/bat --paging=always --color=always -p";
-        description = ''Default terminal pager'';
+        description = "Default terminal pager";
       };
 
       shell = lib.mkOption {
         type = lib.types.str;
         default = "${pkgs.zsh}/bin/zsh";
-        description = ''Default shell'';
+        description = "Default shell";
       };
 
       terminal = lib.mkOption {
         type = lib.types.str;
         default = "ghostty";
-        description = ''Default terminal'';
+        description = "Default terminal";
       };
 
       documentViewer = lib.mkOption {
         type = lib.types.str;
         default = "zathura";
-        description = ''Default document viewer'';
+        description = "Default document viewer";
       };
 
       editor = lib.mkOption {
         type = lib.types.str;
         default = "nvim";
-        description = ''Default editor'';
+        description = "Default editor";
       };
 
       previewer = lib.mkOption {
         type = lib.types.path;
         default = "${pkgs.pistol}/bin/pistol";
-        description = ''Default terminal previewer'';
+        description = "Default terminal previewer";
       };
 
       font = {
         package = lib.mkOption {
           type = lib.types.package;
           default = pkgs.nerd-fonts.jetbrains-mono;
-          description = ''Default font package'';
+          description = "Default font package";
         };
 
         name = lib.mkOption {
           type = lib.types.str;
           default = "JetBrainsMono Nerd Font";
-          description = ''Default font name'';
+          description = "Default font name";
         };
 
         size = lib.mkOption {
           type = lib.types.float;
           default = 12.0;
-          description = ''Default font size'';
+          description = "Default font size";
         };
         size_int = lib.mkOption {
           type = lib.types.int;
           default = 12;
-          description = ''Default font size (as int)'';
+          description = "Default font size (as int)";
         };
       };
 
@@ -122,19 +124,19 @@
         package = lib.mkOption {
           type = lib.types.package;
           default = pkgs.phinger-cursors;
-          description = ''Default cursor package'';
+          description = "Default cursor package";
         };
 
         name = lib.mkOption {
           type = lib.types.str;
           default = "phinger-cursors";
-          description = ''Default cursor theme'';
+          description = "Default cursor theme";
         };
 
         size = lib.mkOption {
           type = lib.types.int;
           default = 32;
-          description = ''Default cursor size'';
+          description = "Default cursor size";
         };
       };
     };

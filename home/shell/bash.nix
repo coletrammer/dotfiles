@@ -17,8 +17,7 @@
       '';
     };
 
-    home.persistence."/persist/home" = {
-      allowOther = true;
+    home.persistence."/persist" = {
       files = [ ".bash_history" ];
     };
   };

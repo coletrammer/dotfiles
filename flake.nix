@@ -26,18 +26,18 @@
     };
 
     di = {
-      url = "github:coletrammer/di/cli-subcommands";
+      url = "github:coletrammer/di";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     dius = {
-      url = "github:coletrammer/dius/subcommands";
+      url = "github:coletrammer/dius";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.di.follows = "di";
     };
 
     ttx = {
-      url = "github:coletrammer/ttx/subcommands";
+      url = "github:coletrammer/ttx";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.dius.follows = "dius";
     };
@@ -84,11 +84,6 @@
 
     ags = {
       url = "github:Aylur/ags/v1";
-    };
-
-    tmux = {
-      url = "github:tmux/tmux/826ba515beef76dff7d8865599a19e06ae1c4f6a";
-      flake = false;
     };
 
     catppuccin-alacritty = {

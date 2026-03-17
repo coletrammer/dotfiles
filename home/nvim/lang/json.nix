@@ -20,7 +20,7 @@
     plugins.lsp.servers.jsonls = {
       enable = true;
       settings = {
-        schemas.__raw = ''require('schemastore').json.schemas()'';
+        schemas.__raw = "require('schemastore').json.schemas()";
         validate.enable = true;
       };
     };

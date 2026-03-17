@@ -1,7 +1,6 @@
-{ config, inputs, ... }:
+{ config, ... }:
 {
   imports = [
-    inputs.impermanence.nixosModules.home-manager.impermanence
     ../..
   ];
 

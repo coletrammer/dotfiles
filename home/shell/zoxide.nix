@@ -15,12 +15,10 @@
       cd = "z";
     };
 
-    home.persistence."/persist/home" = {
-      allowOther = true;
+    home.persistence."/persist" = {
       directories = [
         {
           directory = ".local/share/zoxide";
-          method = "symlink";
         }
       ];
     };

@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  inputs,
   ...
 }:
 {
@@ -18,19 +17,17 @@
   };
 
   config = lib.mkIf config.shell.delta.enable {
-    programs.git = {
-      delta = {
-        enable = true;
-        options = {
-          navigate = true;
-          line-numbers = true;
-          hyperlinks = config.shell.delta.hyperlinks;
-        };
+    programs.delta = {
+      enable = true;
+      options = {
+        navigate = true;
+        line-numbers = true;
+        hyperlinks = config.shell.delta.hyperlinks;
       };
-      extraConfig = {
-        merge.conflictstyle = "diff3";
-        diff.colorMoved = "default";
-      };
+    };
+    programs.git.settings = {
+      merge.conflictstyle = "diff3";
+      diff.colorMoved = "default";
     };
   };
 }

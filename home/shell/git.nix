@@ -9,25 +9,25 @@
       gpgKey = lib.mkOption {
         type = lib.types.str;
         default = "";
-        description = ''The GPG key to use for signing commits (or the empty string to disable)'';
+        description = "The GPG key to use for signing commits (or the empty string to disable)";
       };
 
       email = lib.mkOption {
         type = lib.types.str;
         default = "cole.trammer@gmail.com";
-        description = ''Email address for git to use by default'';
+        description = "Email address for git to use by default";
       };
 
       username = lib.mkOption {
         type = lib.types.str;
         default = "coletrammer";
-        description = ''Username for git to use by default'';
+        description = "Username for git to use by default";
       };
 
       defaultBranch = lib.mkOption {
         type = lib.types.str;
         default = "main";
-        description = ''Branch for git to use by default'';
+        description = "Branch for git to use by default";
       };
 
       github = lib.mkEnableOption "Setup GitHub CLI" // {
@@ -44,9 +44,11 @@
         signByDefault = builtins.stringLength config.shell.git.gpgKey > 0;
         key = if (builtins.stringLength config.shell.git.gpgKey > 0) then config.shell.git.gpgKey else null;
       };
-      userEmail = config.shell.git.email;
-      userName = config.shell.git.username;
-      extraConfig = {
+      settings = {
+        user = {
+          email = config.shell.git.email;
+          name = config.shell.git.username;
+        };
         init.defaultBranch = config.shell.git.defaultBranch;
         pull.rebase = true;
         push.autoSetupRemote = true;

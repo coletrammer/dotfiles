@@ -12,8 +12,7 @@
       indicator = true;
     };
 
-    home.persistence."/persist/home" = {
-      allowOther = true;
+    home.persistence."/persist" = {
       directories = [ ".config/kdeconnect" ];
     };
   };

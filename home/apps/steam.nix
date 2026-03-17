@@ -13,7 +13,7 @@
     home.packages = with pkgs; [
       steam-run
       mangohud
-      protonup
+      protonup-ng
       (pkgs.writeShellScriptBin "evereste-install.sh" ''
         ${pkgs.pipx}/bin/pipx install mons
         ${config.home.homeDirectory}/.local/bin/mons add main '${config.home.homeDirectory}/.local/share/Steam/steamapps/common/Celeste'
@@ -27,32 +27,25 @@
       STEAM_EXTRA_COMPAT_TOOLS_PATHS = "${config.home.homeDirectory}/.steam/root/compatibilitytools.d";
     };
 
-    home.persistence."/persist/home" = {
-      allowOther = true;
+    home.persistence."/persist" = {
       directories = [
         {
           directory = ".local/share/Steam";
-          method = "symlink";
         }
         {
           directory = ".local/share/Celeste";
-          # method = "symlink";
         }
         {
           directory = ".factorio";
-          # method = "symlink";
         }
         {
           directory = ".lunarclient";
-          method = "symlink";
         }
         {
           directory = ".minecraft";
-          method = "symlink";
         }
         {
           directory = ".config/unity3d";
-          # method = "symlink";
         }
       ];
     };

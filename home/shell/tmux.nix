@@ -1,6 +1,5 @@
 {
   config,
-  inputs,
   lib,
   pkgs,
   ...
@@ -19,10 +18,6 @@
   config = lib.mkIf config.shell.tmux.enable {
     programs.tmux = {
       enable = true;
-      package = pkgs.tmux.overrideAttrs {
-        version = "git";
-        src = inputs.tmux;
-      };
       aggressiveResize = true;
       baseIndex = 1;
       historyLimit = 50000;
@@ -119,12 +114,10 @@
       shellIntegrationOptions = [ "-p" ];
     };
 
-    home.persistence."/persist/home" = {
-      allowOther = true;
+    home.persistence."/persist" = {
       directories = [
         {
           directory = ".tmux";
-          method = "symlink";
         }
       ];
     };

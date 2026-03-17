@@ -20,12 +20,10 @@
       };
     };
 
-    home.persistence."/persist/home" = {
-      allowOther = true;
+    home.persistence."/persist" = {
       directories = [
         {
           directory = ".local/share/zathura";
-          method = "symlink";
         }
       ];
     };

@@ -12,16 +12,13 @@
   config = lib.mkIf config.apps.vscode.enable {
     home.packages = with pkgs; [ vscode-fhs ];
 
-    home.persistence."/persist/home" = {
-      allowOther = true;
+    home.persistence."/persist" = {
       directories = [
         {
           directory = ".vscode";
-          method = "symlink";
         }
         {
           directory = ".config/Code";
-          method = "symlink";
         }
       ];
     };

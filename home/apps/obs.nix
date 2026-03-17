@@ -33,16 +33,13 @@
         ];
       };
 
-      home.persistence."/persist/home" = {
-        allowOther = true;
+      home.persistence."/persist" = {
         directories = [
           {
             directory = ".config/obs-studio";
-            method = "symlink";
           }
           {
             directory = ".local/share/livesplitone";
-            # method = "symlink";
           }
         ];
       };

@@ -101,12 +101,10 @@
       bindkey -s '^F' '^U lfcd\n'
     '';
 
-    home.persistence."/persist/home" = {
-      allowOther = true;
+    home.persistence."/persist" = {
       directories = [
         {
           directory = ".local/share/lf";
-          method = "symlink";
         }
       ];
     };

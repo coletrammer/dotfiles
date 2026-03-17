@@ -18,12 +18,12 @@
       variant = lib.mkOption {
         type = lib.types.str;
         default = "mocha";
-        description = ''Color scheme variant'';
+        description = "Color scheme variant";
       };
       accent = lib.mkOption {
         type = lib.types.str;
         default = "lavender";
-        description = ''Color scheme accent'';
+        description = "Color scheme accent";
       };
     };
   };
@@ -102,9 +102,11 @@
       );
 
       # Delta
+      programs.delta = {
+        options = lib.mkIf default { features = "catppuccin-${variant}"; };
+      };
       programs.git = {
-        delta.options = lib.mkIf default { features = "catppuccin-${variant}"; };
-        extraConfig.include.path = [ "${config.xdg.configHome}/delta/catppuccin.gitconfig" ];
+        settings.include.path = [ "${config.xdg.configHome}/delta/catppuccin.gitconfig" ];
       };
       xdg.configFile."delta/catppuccin.gitconfig".source =
         "${inputs.catppuccin-delta}/catppuccin.gitconfig";
@@ -172,7 +174,7 @@
           };
         };
         plugins.bufferline.settings.options.highlights.__raw =
-          "require('catppuccin.groups.integrations.bufferline').get_theme()";
+          "require('catppuccin.special.bufferline').get_theme()";
       };
 
       # Tmux

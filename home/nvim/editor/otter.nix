@@ -10,12 +10,12 @@
       langs = lib.mkOption {
         type = with lib.types; listOf str;
         default = [ ];
-        description = ''Langugages with embedded Langugages.'';
+        description = "Langugages with embedded Langugages.";
       };
       allLangs = lib.mkOption {
         type = with lib.types; listOf str;
         default = [ ];
-        description = ''Langugages to look for.'';
+        description = "Langugages to look for.";
       };
     };
   };

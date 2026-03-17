@@ -14,7 +14,7 @@
       dpi = lib.mkOption {
         type = lib.types.float;
         default = 1.0;
-        description = ''Boot DPI'';
+        description = "Boot DPI";
       };
     };
   };

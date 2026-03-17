@@ -11,7 +11,12 @@
       enable = true;
       settings = {
         preload = [ "~/Pictures/i1.png" ];
-        wallpaper = [ ",~/Pictures/i1.png" ];
+        wallpaper = [
+          {
+            monitor = "";
+            path = "~/Pictures/i1.png";
+          }
+        ];
       };
     };
   };

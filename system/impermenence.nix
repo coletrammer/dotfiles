@@ -70,9 +70,6 @@
       # Need for boot to succeed.
       fileSystems."/persist".neededForBoot = true;
 
-      # Need to home manager persistence.
-      programs.fuse.userAllowOther = true;
-
       environment.persistence."/persist/system" = {
         hideMounts = true;
         directories = [

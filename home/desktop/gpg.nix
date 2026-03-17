@@ -18,8 +18,7 @@
       pinentry.package = pkgs.pinentry-qt;
     };
 
-    home.persistence."/persist/home" = {
-      allowOther = true;
+    home.persistence."/persist" = {
       directories = [ ".gnupg" ];
     };
   };
