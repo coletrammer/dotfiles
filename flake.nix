@@ -26,7 +26,7 @@
     };
 
     di = {
-      url = "github:coletrammer/di";
+      url = "github:coletrammer/di/json";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -37,7 +37,7 @@
     };
 
     ttx = {
-      url = "github:coletrammer/ttx";
+      url = "github:coletrammer/ttx/settings";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.dius.follows = "dius";
     };
