@@ -150,6 +150,14 @@
                 }
               end
             '';
+            lsp_styles = {
+              underlines = {
+                errors = [ "undercurl" ];
+                hints = [ "undercurl" ];
+                warnings = [ "undercurl" ];
+                information = [ "undercurl" ];
+              };
+            };
             integrations = {
               blink_cmp = true;
               diffview = true;
@@ -161,15 +169,6 @@
               which_key = true;
               lsp_trouble = true;
               grug_far = true;
-              native_lsp = {
-                enabled = true;
-                underlines = {
-                  errors = [ "undercurl" ];
-                  hints = [ "undercurl" ];
-                  warnings = [ "undercurl" ];
-                  information = [ "undercurl" ];
-                };
-              };
             };
           };
         };
