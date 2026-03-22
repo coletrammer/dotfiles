@@ -32,20 +32,8 @@
       programs.ttx = {
         enable = true;
         settings = {
-          main = {
-            input = {
-              prefix = "A";
-            };
-            shell = {
-              command = [ "${config.preferences.shell}" ];
-            };
-          };
-          super = {
-            extends = [ "main" ];
-            input = {
-              prefix = "B";
-            };
-          };
+          main = builtins.fromJSON <| builtins.readFile ./ttx-main.json;
+          super = builtins.fromJSON <| builtins.readFile ./ttx-super.json;
         };
       };
 

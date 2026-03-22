@@ -1,0 +1,10 @@
+{
+  "$schema": "https://github.com/coletrammer/ttx/raw/refs/heads/main/meta/schema/config.json",
+  "input": {
+    "prefix": "A"
+  },
+  "shell": {
+    "command": ["/nix/store/vwz55s841vn43976ydjbayflpl8srfqz-zsh-5.9/bin/zsh"]
+  },
+  "version": 1
+}

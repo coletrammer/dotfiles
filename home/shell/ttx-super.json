@@ -1,0 +1,8 @@
+{
+  "$schema": "https://github.com/coletrammer/ttx/raw/refs/heads/main/meta/schema/config.json",
+  "extends": ["main"],
+  "input": {
+    "prefix": "B"
+  },
+  "version": 1
+}
