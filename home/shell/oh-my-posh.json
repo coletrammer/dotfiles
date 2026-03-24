@@ -32,7 +32,7 @@
           "background": "transparent",
           "foreground": "blue",
           "template": " {{ .Path }}",
-          "properties": {
+          "options": {
             "style": "folder"
           }
         },
@@ -40,9 +40,9 @@
           "type": "git",
           "style": "plain",
           "background": "transparent",
-          "foreground": "magenta",
+          "foreground": "lightMagenta",
           "template": "<white> on </>{{ .HEAD }}",
-          "properties": {
+          "options": {
             "fetch_status": true,
             "branch_icon": " "
           }
@@ -60,7 +60,7 @@
           "background": "transparent",
           "foreground": "yellow",
           "template": "<white> took </>{{ .FormattedMs }}",
-          "properties": {
+          "options": {
             "threshold": 5000,
             "style": "round"
           }
