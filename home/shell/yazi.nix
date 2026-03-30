@@ -52,7 +52,7 @@
           rm -f -- "$tmp"
         }
 
-        bindkey -s '^F' '^U yy\n'
+        bindkey -s '^F' '^U y\n'
       '';
   };
 }

@@ -37,7 +37,7 @@
     };
 
     ttx = {
-      url = "github:coletrammer/ttx/settings";
+      url = "github:coletrammer/ttx";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.dius.follows = "dius";
     };
@@ -128,6 +128,11 @@
 
     catppuccin-zsh-fsh = {
       url = "github:catppuccin/zsh-fsh";
+      flake = false;
+    };
+
+    pixel-nvim = {
+      url = "github:bjarneo/pixel.nvim";
       flake = false;
     };
 

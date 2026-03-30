@@ -32,7 +32,11 @@
       programs.ttx = {
         enable = true;
         settings = {
-          main = builtins.fromJSON <| builtins.readFile ./ttx-main.json;
+          main = (builtins.fromJSON <| builtins.readFile ./ttx-main.json) // {
+            shell = {
+              command = [ config.preferences.shell ];
+            };
+          };
           super = builtins.fromJSON <| builtins.readFile ./ttx-super.json;
         };
       };

@@ -5,6 +5,7 @@
   "disable_notice": false,
   "pwd": "osc7",
   "shell_integration": true,
+  "console_title_template": "{{ .Folder }}",
   "blocks": [
     {
       "type": "prompt",
@@ -40,7 +41,7 @@
           "type": "git",
           "style": "plain",
           "background": "transparent",
-          "foreground": "lightMagenta",
+          "foreground": "magenta",
           "template": "<white> on </>{{ .HEAD }}",
           "options": {
             "fetch_status": true,

@@ -2,7 +2,10 @@
   "$schema": "https://github.com/coletrammer/ttx/raw/refs/heads/main/meta/schema/config.json",
   "extends": ["main"],
   "input": {
-    "prefix": "B"
+    "prefix": "b"
+  },
+  "terminfo": {
+    "term": "xterm-256color"
   },
   "version": 1
 }
