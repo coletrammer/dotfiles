@@ -8,6 +8,15 @@
       url = "github:hercules-ci/flake-parts";
     };
 
+    import-tree = {
+      url = "github:vic/import-tree";
+    };
+
+    wrapper-modules = {
+      url = "github:BirdeeHub/nix-wrapper-modules";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";
     };
@@ -80,10 +89,6 @@
     multicursor-nvim = {
       url = "github:jake-stewart/multicursor.nvim";
       flake = false;
-    };
-
-    ags = {
-      url = "github:Aylur/ags/v1";
     };
 
     catppuccin-alacritty = {
@@ -167,17 +172,15 @@
 
       imports = [
         inputs.treefmt-nix.flakeModule
-        inputs.flake-root.flakeModule
         hosts/flake-module.nix
         home/configurations/flake-module.nix
-      ];
+      ]
+      ++ (inputs.import-tree ./modules).imports;
 
       perSystem =
         { config, pkgs, ... }:
         {
           treefmt.config = {
-            inherit (config.flake-root) projectRootFile;
-
             programs.stylua.enable = true;
             programs.nixfmt.enable = true;
             programs.prettier.enable = true;

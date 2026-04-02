@@ -2,6 +2,7 @@
   helpers,
   inputs,
   pkgs,
+  self,
   ...
 }:
 {
@@ -38,6 +39,7 @@
     extraSpecialArgs = {
       inherit helpers;
       inherit inputs;
+      inherit self;
     };
     users = {
       "colet" = import (../../home/configurations/x86_64-linux + "/colet@desktop.nix");
