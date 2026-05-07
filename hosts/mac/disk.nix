@@ -3,7 +3,7 @@
     disk = {
       main = {
         type = "disk";
-        # device = "/dev/disk/by-id/nvme-APPLE_SSD_AP0256Q_0ba012e404080419";
+        device = "/dev/disk/by-id/nvme-APPLE_SSD_AP0512Z_0ba01e4b200c5206";
         destroy = false;
 
         content = {
@@ -14,26 +14,26 @@
               label = "iBootSystemContainer";
               priority = 1;
               type = "AF0B";
-              # uuid = "62132ea7-731c-44eb-848a-80a899f51311";
+              uuid = "692be901-bf96-4b52-85da-4b828acad811";
             };
 
             Container = {
               label = "Container";
               priority = 2;
               type = "AF0A";
-              # uuid = "18fa4f40-f0b2-407f-9eea-a1491cefeaa4";
+              uuid = "f862810c-dadc-4458-a8b0-46f121aa17d4";
             };
 
             NixOSContainer = {
               priority = 3;
               type = "AF0A";
-              # uuid = "4238759e-8d52-4fd7-a67f-c1476fce03f9";
+              uuid = "42e8c2be-cc3c-47e9-8ea8-4875b01771e6";
             };
 
             ESP = {
               priority = 4;
               type = "EF00";
-              # uuid = "ff9579f2-e598-4e95-b8be-91f66eaba3a4";
+              uuid = "f25b8c4b-9301-4319-8e22-fed77df71469";
 
               content = {
                 type = "filesystem";
@@ -92,7 +92,7 @@
               label = "RecoveryOSContainer";
               priority = 5;
               type = "AF0C";
-              # uuid = "37b1fd46-dc1b-4342-887c-f533d6ca1de2";
+              uuid = "85d06b1d-d623-4384-adc7-4f48a4c20dca";
             };
           };
         };
