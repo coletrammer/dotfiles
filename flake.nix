@@ -5,8 +5,8 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     apple-silicon = {
-        url = "github:nix-community/nixos-apple-silicon";
-        inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/nixos-apple-silicon";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     flake-parts = {
@@ -15,6 +15,25 @@
 
     import-tree = {
       url = "github:vic/import-tree";
+    };
+
+    nix-darwin = {
+      url = "github:nix-darwin/nix-darwin/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nix-homebrew = {
+      url = "github:zhaofengli/nix-homebrew";
+    };
+
+    homebrew-core = {
+      url = "github:homebrew/homebrew-core";
+      flake = false;
+    };
+
+    homebrew-cask = {
+      url = "github:homebrew/homebrew-cask";
+      flake = false;
     };
 
     wrapper-modules = {
@@ -177,6 +196,7 @@
 
       imports = [
         inputs.treefmt-nix.flakeModule
+        darwin/flake-module.nix
         hosts/flake-module.nix
         home/configurations/flake-module.nix
       ]

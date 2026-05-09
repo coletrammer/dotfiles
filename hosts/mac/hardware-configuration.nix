@@ -1,9 +1,10 @@
 {
-    lib,
-    inputs,
-...
-}: {
-    boot.initrd.availableKernelModules = [ "usb_storage" ];
+  lib,
+  inputs,
+  ...
+}:
+{
+  boot.initrd.availableKernelModules = [ "usb_storage" ];
 
-    nixpkgs.hostPlatform = lib.mkDefault "aarch64-linux";
+  nixpkgs.hostPlatform = lib.mkDefault "aarch64-linux";
 }
