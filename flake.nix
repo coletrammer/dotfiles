@@ -59,12 +59,12 @@
     };
 
     di = {
-      url = "github:coletrammer/di";
+      url = "github:coletrammer/di/aarch64";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     dius = {
-      url = "github:coletrammer/dius";
+      url = "github:coletrammer/dius/aarch64";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.di.follows = "di";
     };
