@@ -27,13 +27,13 @@
             NixOSContainer = {
               priority = 3;
               type = "AF0A";
-              uuid = "42e8c2be-cc3c-47e9-8ea8-4875b01771e6";
+              uuid = "050e466e-de7b-49ef-8d52-936489596070";
             };
 
             ESP = {
               priority = 4;
               type = "EF00";
-              uuid = "f25b8c4b-9301-4319-8e22-fed77df71469";
+              uuid = "7545fc03-8de8-496c-84c9-19dcd4f54d21";
 
               content = {
                 type = "filesystem";
