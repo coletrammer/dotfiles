@@ -25,6 +25,7 @@
   };
 
   desktop.enable = true;
+  desktop.hyprland.defaultScale = 1.6;
   # shell.git.gpgKey = "60DCAA3C4B6F51E3";
   shell.ttx.enable = false; # FIX!
   shell.ttx.autostart = true;

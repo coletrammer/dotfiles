@@ -7,7 +7,10 @@
   };
 
   config = lib.mkIf config.network.enable {
-    networking.networkmanager.enable = true;
+    networking.networkmanager = {
+      enable = true;
+      wifi.backend = "iwd";
+    };
 
     hardware.bluetooth = {
       enable = true;
@@ -20,6 +23,7 @@
       hideMounts = true;
       directories = [
         "/var/lib/bluetooth"
+        "/var/lib/iwd"
         "/etc/NetworkManager/system-connections"
       ];
     };

@@ -7,8 +7,15 @@
 }:
 {
   options = {
-    desktop.hyprland.enable = lib.mkEnableOption "Hyprland" // {
-      default = config.desktop.enable;
+    desktop.hyprland = {
+      enable = lib.mkEnableOption "Hyprland" // {
+        default = config.desktop.enable;
+      };
+      defaultScale = lib.mkOption {
+        type = lib.types.float;
+        default = 1;
+        description = "Defalt moitor scale";
+      };
     };
   };
 
@@ -22,7 +29,7 @@
         {
           "$mod" = "SUPER";
           monitor = [
-            ",preferred,auto,1"
+            ",preferred,auto,${toString config.desktop.hyprland.defaultScale}"
             "DP-1, 3840x2160, 2560x0, 1.5"
             "DP-2, 3840x2160, 0x0, 1.5"
           ];

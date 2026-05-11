@@ -21,7 +21,7 @@
 
   users.users."colet" = {
     isNormalUser = true;
-    # hashedPasswordFile = "/persist/secrets/passwords/colet";
+    hashedPasswordFile = "/persist/secrets/passwords/colet";
     shell = pkgs.zsh;
     extraGroups = [
       "wheel"
@@ -33,9 +33,6 @@
   # steam.enable = true;
   docker.enable = true;
   docs.enable = true;
-
-  # ?
-  services.logrotate.checkConfig = false;
 
   home-manager = {
     extraSpecialArgs = {
@@ -49,7 +46,6 @@
   };
 
   networking.hostName = "mac";
-  networking.networkmanager.wifi.backend = "iwd";
 
   hardware.apple.touchBar = {
     enable = true;
